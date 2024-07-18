@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAYDAY</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            position: relative;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        header img {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+        header .logo {
+            position: absolute;
+            top: 20px;
+            left: 35px;
+            width: 60px; /* 设置图片宽度，可根据需要调整 */
+            z-index: 1;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1))invert(100%);
+        }
+        .header-container {
+            position: relative;
+            display: inline-block;
+        }   
+        .container {
+            padding: 2em;
+            text-align: center;
+        }   
+        .container p {
+            font-size: 1.5em;
+        }
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* 适当的间隔 */
+            margin-top: 20px;
+        }
+        .links a {
+            font-size: 1.5em; /* 增大链接字体 */
+            padding: 10px 20px;
+            color: #333;
+            border: 2px solid lightgrey; /* 浅灰色边框 */
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s, color 0.3s;
+        }
+        .links a:hover {
+            background: rgba(0, 0, 0, 0.1);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="main_header.JPG" alt="背景图片">
+        <a href="index.html">
+            <img src="logo.png" alt="网站Logo" class="logo">
+        </a>
+    </header>
+    <div class="container">
+        <p>May Land, My Land<br>
+            然後呢？一起探索吧！
+        </p>
+        
+        <div class="links">
+            <a href="category1.html">考古館</a>
+            <a href="category2.html">素材館</a>
+            <a href="about.html">關於本站</a>
+        </div>
+        
+    </div>
+</body>
+</html>

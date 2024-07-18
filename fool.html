@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三个傻瓜 - 音乐与视频分享</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+        header {
+            position: relative;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        header img {
+            width: 100%;
+            height: auto;
+            
+        }
+        header .logo {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5%; /* 设置图片宽度，可根据需要调整 */
+            z-index: 1;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1)) invert(100%);
+        }   
+        .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-left: 55px; /* 左边距 */
+            margin-right: 55px; /* 右边距 */
+            border: 2px solid #67cced;
+        }
+
+        .back {
+            margin-left: 55px; /* 左边距 */
+            margin-right: 25px; /* 右边距 */
+        }
+        .content img {
+            width: 50%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .text-content {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .text-content p {
+            margin: 10px 0;
+            text-indent: 2em; /* 首行縮進 */
+        }
+        .text-content .highlight {
+            color: #557140; /* 橙色 */
+            text-align: center;
+            line-height: 1;
+            font-size: 16px;
+        }
+        .text-content .note {
+            font-style: italic;
+            color: #555; /* 灰色 */
+        }
+        .text-content .note2 {
+            color: #da7d7d; /* 灰色 */
+        }
+        
+        .container p {
+            font-size: 1.5em;
+        
+        }
+        .audio-link {
+            margin: 1em 0;
+        }
+        .center {
+            text-align: center;
+        }
+        .center img {
+            width: 500px; /* 设置图片宽度为父元素宽度的50%，可以根据需要调整 */
+            display: block; /* 让图片居中显示 */
+            margin: 0 auto; /* 使用 margin 属性自动居中 */
+        
+        }
+        .audio-controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .section-label {
+            display: block;
+            text-align: center;
+            background-color: #67cced; /* 淡藍色 */
+            color: white;
+            font-size: 20px; /* 比正文字體大 */
+            padding: 10px 0;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        
+        a {
+            color: inherit; /* 使用父元素的字體顏色 */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="main_header2.JPG" alt="背景图片">
+        <a href="index.html">
+            <img src="logo.png" alt="网站Logo" class="logo">
+        </a>
+    </header>
+    <div class="back">
+        <p><a href="index.html">首頁 > <a href="category1.html">考古館 > <a href="2ndlife_a.html">第二人生 > </a>三個傻瓜</p>
+    </div>
+    <div class="content">
+        
+        <div class="audio-controls"> 
+            <p>BGM:三個傻瓜demo <a href="/Users/lee/web/fooldemo.mp3" download="fooldemo.mp3">下载</a></p>
+            <audio id="myAudio" src="fooldemo.mp3" controls autoplay></audio><br>
+            <button onclick="toggleAudio()">播放/暫停</button>
+            <button onclick="restartAudio()">重新播放</button>
+        </div>
+    
+        <div class="section-label">阿信的博客</div>
+        <div class="audio-link">
+            <h2>[review] 考試，萬歲。</h2>
+            <h3><a href="https://blog.sina.com.cn/s/blog_4b66ade80102e9av.html">阿信 2012-05-22 19:46:35</a>  [原文] 2008-05-02</h3>
+        </div>
+       
+        <img src="3fool1.png" alt="图片">
+        <div class="text-content">
+            <p class="highlight">結束我人生最後一次考試的那年夏天，我和大一同學一起登上七星山頂。</p>
+            <p><br></p>
+            <p>又是五月。</p>
+            <p>在憂鬱與快樂中不停碰撞，終於慢慢長大的我們，人生中必定走過幾個悶熱而不安的五月。 </p>
+            <p>不知道自己的明天在哪裡，只知道當時的自己，非常不願意的，把自己奉獻給那些永遠讀不完的書，背不起來的單字，搞不懂來龍去脈的公式。 </p>
+            <p>坐在教室裡，趴在課本上發呆，看著桌子與黑板交界的地平線，幻想著考完試的那天，一定要找一個無人的山頭，將課本與參考書，一頁頁的撕下來，丟到熊熊的火中，讓他們永遠埋葬在灰燼之中。然後，輕輕的獻上我最叛逆的禮讚：「X!」。 </p>
+            <p>我恨考試。那是十幾歲的我，第一次真正恨到的東西。 </p>
+            <p>他讓我還沒來得及長大，就已經在教室裡老了。 </p>
+            <p>我總是在清晨六點到校，用隨身聽聽著王傑的歌，幻想自己是一匹遠離這一切的孤狼。幻想自己有一天會負氣的逃走，再也沒有人找得到我。 </p>
+            <p>現在，那些回憶，都已經是很遠以前的事了，但，我知道，也許正看著這篇文章的你，還在嚐著那年我也嚐過的無邊苦澀。 </p>
+           
+            <p style="text-align: center;">-------------------------------------------------------------------------------	 </p>
+            <p>然後？ </p>
+            <p>後來，考完試的那一天，我沒有去山上，也沒有燒掉任何一頁課本。 我跟同學去看了電影，騎腳踏車去關渡大橋吹風，打了幾場籃球，游了一個夏天的泳，獨自一個人在家作汽車模型，就是忘了燒課本這回事。 </p>
+            <p>後來，我發現，我恨的不是考試。我討厭的是那個不想面對而充滿不安的自己。我的考運不錯，成績並不頂尖的我上了師大附中，這讓我的老師們跌破了眼鏡。在蟬聲綿綿的八月天裡，我忐忑不安的到新學校去，註冊完的第一件事，就去了吉他社。 </p>
+            <p>這大概是我走向今天這個命運的起點吧。 </p>
+            
+            <p style="text-align: center;">------------------------------------------------------------------------------- </p>
+            <p>如果我當初分數有所不同，也許，會跟著當時暗戀的女生，進了泰北初中一起念美術。當然，這麼一來，世界上就沒有一個叫做五月天的樂團，而你們就不會認識我。 ...但我想，我應該會過著另外一種不同的美麗生活吧。</p>
+            <p>說不定少了更多的煩惱，多了更多的快樂。 </p>
+            <p>到了今天，我還是不喜歡考試，它依然虐待著你們，如同虐待我的弟弟妹妹。但我想說，與其恨考試，不如靜下心來，就讓自己努力一回，為了自己，為了打開自己不一樣的命運。 </p>
+            <p>我想，考試這玩意兒，真的會萬歲萬萬歲，因為它大概是競爭下唯一的公平規則吧。 </p>
+            <p>各位考生，現在是清晨 6:15 分，你們大概正要從嚴重的睡眠不足中奮力的離開被窩，迎向又一天的挑戰。而我，正把沒寫完的歌詞丟著，寫著這篇應該算是你們看過最爛的鼓勵文。 </p>
+            
+            <p style="text-align: center;">------------------------------------------------------------------------------- </p>
+            <p>其實，我只想說，無論現在的你是怎樣的心情，有人知道你的感覺，有人站在你這邊，有人在五月的某天的清晨，為你加油。 </p>
+            <p class="note" style="text-indent: 0em;">（嗯？考生在這裡鬼混？滾！快滾去讀書吧！五月天會一直等著你的。）</p>
+            <p><br></p>
+            <p><br></p>
+            <p class="note2" style="text-indent: 0em;">祝福今年要奮戰的同學！咬牙忍耐，後面一定有更繽紛的日子在等著你。</p>
+        </div>
+        <div class="section-label">微博互動</div>
+        <div class="text-content">
+            <h3 style="text-indent: 0em;">被控制帳號的“三個傻瓜”：</h3>
+            <img src="3fool2.PNG" alt="图片">
+            <p class="note" style="font-size: 14px;" >*進度嚴重超前，指進度遠在前面，還需要追趕[doge]。這在創作小九時期成為他們與五迷日常報告進度（拖延）的一個常用語</p>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('myAudio');
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        function restartAudio() {
+            audio.currentTime = 0;
+            audio.play();
+        }
+    </script>
+</body>
+</html>
+
