@@ -34,8 +34,8 @@
         .content {
             padding: 2em;
             margin-top: -5px;
-            margin-left: 55px; /* 左边距 */
-            margin-right: 55px; /* 右边距 */
+            margin-left: 25px; /* 左边距 */
+            margin-right: 25px; /* 右边距 */
             border: 2px solid #67cced;
         }
 
@@ -104,6 +104,15 @@
         
         a {
             color: inherit; /* 使用父元素的字體顏色 */
+        }
+        @media (min-width: 600px) {
+            .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-left: 55px; /* 左边距 */
+            margin-right: 55px; /* 右边距 */
+            border: 2px solid #67cced;
+            }
         }
     </style>
 </head>
