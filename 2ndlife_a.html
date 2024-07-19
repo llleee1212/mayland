@@ -65,6 +65,34 @@
         a {
             color: inherit; /* 使用父元素的字體顏色 */
         }
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px; /* 适当的间隔 */
+            margin-top: 10px;
+            align-items: center;
+            line-height: 1;
+        }
+        .links a {
+            padding:10px 20px;
+            color: #333;
+            border: 2px solid lightgrey; /* 浅灰色边框 */
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s, color 0.3s;
+        }
+        .links a:hover {
+            background: rgba(0, 0, 0, 0.1);
+            color: black;
+        }
+        h1 {
+            padding: 0;
+            border: none;
+        }
+        h1 a {
+            text-decoration: none; /* 去掉链接下划线 */
+            color: inherit; /* 继承父元素的颜色 */
+        }
     </style>
 </head>
 <body>
@@ -74,11 +102,20 @@
             <img src="logo.png" alt="网站Logo" class="logo">
         </a>
     </header>
+    
+
     <div class="content">
-        <h2>第二人生</h2>
-        
-    <div class="audio-link">
-            <p><a href="fool.html">三個傻瓜</a>     <a href="ark.html">諾亞方舟</a></p>
+        <h1 style="color: #5baaf3;"> <a href="index.html">首頁 &gt; <a href="category1.html">考古館 &gt; </a>第二人生</h1>
+        <div class="links">
+            <h2><a href="fool.html">三個傻瓜</a></h2>
+            <h2><a href="ark.html">諾亞方舟</a></h2>
+            <h2><a href=".html">1</a></h2>
+            <h2><a href=".html">2</a></h2>
+            <h2><a href=".html">3</a></h2>
+            <h2><a href=".html">4</a></h2>
+            <h2><a href=".html">4</a></h2>
+            <h2><a href=".html">6</a></h2>
+            <h2><a href=".html">5</a></h2>
         </div>
     </div>
 </body>
