@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类2 - 音乐与视频分享</title>
+    <title>素材館</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -24,8 +24,8 @@
         }
         header .logo {
             position: absolute;
-            top: 20px;
-            left: 35px;
+            top: 16px;
+            left: 28px;
             width: 60px; /* 设置图片宽度，可根据需要调整 */
             z-index: 1;
             filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1))invert(100%);
@@ -39,6 +39,26 @@
         }
         .audio-link {
             margin: 1em 0;
+        }
+        @media (min-width: 600px) {
+            header .logo {
+                top: 20px;
+                left: 35px;
+                width: 60px; /* 大屏幕logo大小 */
+            }
+            .container {
+                padding: 2em; /* 增加大屏幕的padding */
+            }
+            .container p {
+                font-size: 1.5em; /* 大屏幕文字大小 */
+            }
+            .links {
+                gap: 20px
+            }
+            .links a {
+                font-size: 1.5em; /* 大屏幕链接字体大小 */
+                padding: 10px 20px; /* 调整padding */
+            }
         }
     </style>
 </head>
