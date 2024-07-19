@@ -38,6 +38,7 @@
         .content {
             padding: 0;
             margin-top: 0;
+            font-size: 14px;
             margin-left: 55px; /* 左边距 */
             margin-right: 55px; /* 右边距 */
         }
@@ -72,6 +73,7 @@
             margin-top: 10px;
             align-items: center;
             line-height: 1;
+            font-size: 14px;
         }
         .links a {
             padding:10px 20px;
@@ -93,6 +95,14 @@
             text-decoration: none; /* 去掉链接下划线 */
             color: inherit; /* 继承父元素的颜色 */
         }
+        @media (min-width: 600px) {
+            .links {
+            font-size: 16px;
+            }
+            .content {
+            font-size: 16px;
+            }
+        }    
     </style>
 </head>
 <body>
