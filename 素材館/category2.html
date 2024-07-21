@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>素材館</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+        header img {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+        header .logo {
+            position: absolute;
+            top: 16px;
+            left: 25px;
+            width: 40px; /* 设置图片宽度，可根据需要调整 */
+            z-index: 1;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1))invert(100%);
+        }
+        .header-container {
+            position: relative;
+            display: inline-block;
+        }
+        .container {
+            padding: 2em;
+        }
+        .audio-link {
+            margin: 1em 0;
+        }
+        @media (min-width: 600px) {
+            header .logo {
+                top: 20px;
+                left: 35px;
+                width: 60px; /* 大屏幕logo大小 */
+            }
+            .container {
+                padding: 2em; /* 增加大屏幕的padding */
+            }
+            .container p {
+                font-size: 1.5em; /* 大屏幕文字大小 */
+            }
+            .links {
+                gap: 20px
+            }
+            .links a {
+                font-size: 1.5em; /* 大屏幕链接字体大小 */
+                padding: 10px 20px; /* 调整padding */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="logo.png" alt="网站Logo" class="logo">
+        </a>
+        <h1>暫未開放，敬請期待</h1>
+    </header>
+    
+</body>
+</html>

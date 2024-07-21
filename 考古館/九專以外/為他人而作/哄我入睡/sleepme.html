@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哄我入睡</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            
+        }
+        header {
+            position: relative;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        header img {
+            width: 100%;
+            height: auto;
+            
+        }
+        header .logo {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5%; /* 设置图片宽度，可根据需要调整 */
+            z-index: 1;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1)) invert(100%);
+        }   
+        .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-bottom: 20px;
+            margin-left: 15px; /* 左边距 */
+            margin-right: 15px; /* 右边距 */
+            border: 2px solid #67cced;
+        }
+
+        .back {
+            padding-left: 0;
+            margin-left: 15px; /* 左边距 */
+            margin-right: 15px; /* 右边距 */
+            text-decoration: none;
+        }
+        .content img {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .text-content {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .text-content2 {
+            margin: 20px 0;
+            font-size: 18px;
+           
+        }
+        .text-content p {
+            margin: 10px 0;
+             /* 首行縮進 */
+        }
+        .text-content2 p {
+            margin: 5px 0;
+        }
+        
+        .text-content .highlight {
+            color: #557140; /* 橙色 */
+            line-height: 1;
+            font-size: 16px;
+        }
+        .text-content .note {
+            font-style: italic;
+            color: #555; /* 灰色 */
+        }
+        .text-content2 .note {
+            font-style: italic;
+            color: #555; /* 灰色 */
+        }
+        .text-content .note2 {
+            color: #da7d7d; /* 灰色 */
+        }
+        
+        .container p {
+            font-size: 1.5em;
+        
+        }
+        .audio-link {
+            margin: 1em 0;
+        }
+        .center {
+            text-align: center;
+        }
+        .center img {
+            width: 500px; /* 设置图片宽度为父元素宽度的50%，可以根据需要调整 */
+            display: block; /* 让图片居中显示 */
+            margin: 0 auto; /* 使用 margin 属性自动居中 */
+        
+        }
+        .audio-controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .section-label {
+            display: block;
+            text-align: center;
+            background-color: #67cced; /* 淡藍色 */
+            color: white;
+            font-size: 20px; /* 比正文字體大 */
+            padding:10px 0;
+            margin: 20px 0;
+            margin-right: -32px;
+            margin-left: -32px;
+            font-weight: bold;
+        }
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+            margin-top: -5px;
+            width: 80%; /* 或设置一个固定宽度 */
+            max-width: 800px; /* 最大宽度，防止过宽 */
+        }
+        video {
+            width: 100%; /* 播放器宽度占满容器 */
+            height: auto; /* 高度自适应 */
+        }
+        
+        a {
+            color: inherit; /* 使用父元素的字體顏色 */
+            text-decoration: none;
+        }
+        @media (min-width: 600px) {
+            .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-bottom: 40px;
+            margin-left: 55px; /* 左边距 */
+            margin-right: 55px; /* 右边距 */
+            border: 2px solid #67cced;
+            }
+            .content img {
+                width: 50%;
+            }
+            .back {
+            margin-left: 55px; /* 左边距 */
+            margin-right: 25px; /* 右边距 */
+            }
+            .section-label {
+            margin-right: -32px;
+            margin-left: -32px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../../../../main_header2.JPG" alt="背景图片">
+        <a href="../../../../index.html">
+            <img src="../../../../logo.png" alt="网站Logo" class="logo">
+        </a>
+    </header>
+    <div class="back">
+        <p><a href="../../../../index.html">首頁 &gt; <a href="../../../category1.html">考古館 &gt; <a href="../other.html">為他人而作 &gt; </a>哄我入睡</p>
+    </div>
+    <div class="content">
+        
+        <div class="audio-controls"> 
+            <p>BGM:哄我入睡(阿信) <a href="sleepme.mp3" download="sleepme.mp3"></a></p>
+            <audio id="myAudio" src="sleepme.mp3" controls autoplay></audio><br>
+            <button onclick="toggleAudio()">播放/暫停</button>
+            <button onclick="restartAudio()">重新播放</button>
+        </div>
+    
+        <div class="section-label">阿信的博客</div>
+        <div class="audio-link">
+            <h2>午後。</h2>
+            <h3><a style="text-decoration: underline;" href="https://blog.sina.com.cn/s/blog_4b66ade80100a6v6.html">阿信 2008-07-15 06:41:36</a></h3>
+        </div>
+       
+        <div class="text-content">
+            <img src="sleepme1.jpeg" style="display: block; float: left;" alt="图片">
+            <div style="clear: both;"></div>
+            <p class="highlight" style="text-indent: 0em; font-size: 14px;">photo by ashin, 2008/benq x800</p>
+            <p>大王椰子樹一直是附中人的驕傲，
+            <p>除了高聳、筆直、大器，
+            <p>它更是尊爵、榮耀、不凡的阿魯巴的神聖器具。
+            <p>夏天的奏鳴曲就是蟬鳴、吉他聲、英文課本朗誦聲、遠處的白目同學運球聲交織而成的。
+            <p>而奏鳴曲的開端，一定要是被阿魯巴的同學，那撕裂清澈天空的叫聲。
+            <p><br></p>
+            <p>少了這個，就不對了。
+            <p><br></p>
+            <img src="sleepme2.jpeg" style="display: block; float: left;" alt="图片">
+            <div style="clear: both;"></div>
+            <p class="highlight" style="text-indent: 0em; font-size: 14px;">photo by ashin, 2008/benq x800</p>
+            <p>抬起頭，可以看到好久不見的風光。 
+            <p>和妳一起走的那陣子，我的眼睛都沒有時間抬頭看。 
+            <p><br></p>
+            <img src="sleepme3.jpeg" style="display: block; float: left;" alt="图片">
+            <div style="clear: both;"></div>
+            <p class="highlight" style="text-indent: 0em; font-size: 14px;">photo by ashin, 2008/benq x800</p>
+            <p>他曾經是全世界最高的。
+            <p>那些年，我們看著他，也變得什麼都不怕了。
+            <p><br></p>
+            <img src="sleepme4.jpeg" style="display: block; float: left;" alt="图片">
+            <div style="clear: both;"></div>
+            <p class="highlight" style="text-indent: 0em; font-size: 14px;">photo by ashin, 2008/benq x800</p>
+            <p>兩頂安全帽、一個加滿的油箱、她和他不需要目的地的午後心情，
+            <p>我以為，這些就是飛行需要的所有配備了。
+            <p><br></p>
+            <img src="sleepme5.jpeg" style="display: block; float: left;" alt="图片">
+            <div style="clear: both;"></div>
+            <p class="highlight" style="text-indent: 0em; font-size: 14px;">photo by ashin, 2008/benq x800</p>
+            <p><br></p>
+            <p>那年深深愛過  也深深痛過
+            <p>愛完了  然後他走了
+            <p><br></p>                                                             
+            <p>時間嘩啦啦過  淚也刷啦啦流 
+            <p>他忘了  把心還我
+            <p><br></p>  
+            <p><br></p>                                                                                                                      
+            <p>「夏天的戀愛，通常壽命只有一個午後。」
+            <p><br></p>  
+            <p style="font-size: 14px;" >music：
+            <p style="font-size: 14px;" >「哄我入睡」ver.love radio
+            <p style="font-size: 14px;" >演唱：梁靜茹
+            <p style="font-size: 14px;" >詞曲：阿信
+            <p style="font-size: 14px;" >編曲：周恆毅 </p>
+        </div>
+        
+        <div class="section-label">歌曲信息</div>
+            <div class="text-content2">
+                <p>
+                    <span style="font-size: 1.5em; font-weight: bold;">哄我入睡  </span>
+                    <span>（詞曲:阿信&nbsp;&nbsp;&nbsp;編曲:阿信&nbsp;怪獸&nbsp;&nbsp;&nbsp;原唱*:品冠）</span>
+                </p>
+                <p><br></p>  
+                <p>那年深深愛過 也深深痛過 愛完了然後他走了
+                <p>時間嘩啦啦啦過 淚也刷啦啦啦流 他忘了把心還我
+                <p>把心細細上鎖 也密密縫過 為什麼眼淚還在流
+                <p>愛是笑呵呵的瘋 然後哎呀呀的痛 直到你出現拯救我
+                <p><br></p>  
+                <p>你把孤單消滅 都消滅 全都消滅
+                <p>給我安慰 抱著我哄我入睡
+                <p>我的世界 每天笑笑到累 累得很滿足才甘願
+                <p>你把孤單消滅 都消滅 全都消滅
+                <p>給我安慰 抱著我哄我入睡
+                <p>你的笑容 我一定很寶貝 
+                <p>從今天到永遠（永遠不會疲倦）
+                <p><br></p>  
+                <p>那天我眼淚偷偷滴在碗中
+                <p>你做了刀削面為了我
+                <p>刀削面就像你的深刻溫柔
+                <p>越嚼過就越甜越感動
+                <p><br></p>  
+                <p>你把孤單消滅 都消滅 全都消滅
+                <p>給我安慰 抱著我哄我入睡
+                <p>我的世界 每天笑笑到累 累得很滿足才甘願
+                <p>你把孤單消滅 都消滅 全都消滅
+                <p>給我安慰 抱著我哄我入睡
+                <p>你的笑容 我一定很寶貝 
+                <p>從今天到永遠 永遠不會疲倦
+                <p><br></p>  
+                <p class="note" style="font-size: 14px; text-indent: 0em; ">*之後一版的原唱為梁靜茹，但歌詞更短，兩版編曲風格有差異</p>
+            </div>
+  
+        <div class="section-label">微博互動</div>
+        <div class="text-content">
+            <h3 style="text-indent: 0em;">哄你入睡</h3>
+            <img src="sleepme6.png" alt="图片">
+            <br>
+            <p style="text-align: center; color: #7d7d7d;">--未完待續--</p>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('myAudio');
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        function restartAudio() {
+            audio.currentTime = 0;
+            audio.play();
+            function playAudioOnFirstInteraction() {
+            audio.play().catch(error => {
+                console.log('Audio playback was prevented:', error);
+            });
+            // 移除事件监听器，以避免重复触发
+            document.removeEventListener('click', playAudioOnFirstInteraction);
+            document.removeEventListener('touchstart', playAudioOnFirstInteraction);
+        }
+
+        // 添加事件监听器，检测用户的第一次交互
+        document.addEventListener('click', playAudioOnFirstInteraction);
+        document.addEventListener('touchstart', playAudioOnFirstInteraction);
+        }
+    </script>
+</body>
+</html>
