@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自傳-成名在望</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            
+        }
+        header {
+            position: relative;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        header img {
+            width: 100%;
+            height: auto;
+            
+        }
+        header .logo {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5%; /* 设置图片宽度，可根据需要调整 */
+            z-index: 1;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1)) invert(100%);
+        }   
+        .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-bottom: 20px;
+            margin-left: 15px; /* 左边距 */
+            margin-right: 15px; /* 右边距 */
+            border: 2px solid #67cced;
+        }
+
+        .back {
+            padding-left: 0;
+            margin-left: 15px; /* 左边距 */
+            margin-right: 15px; /* 右边距 */
+            text-decoration: none;
+        }
+        .content img {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .text-content {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .text-content2 {
+            font-size: 18px;
+           
+        }
+        .text-content p {
+            margin: 10px 0;
+
+        }
+        .text-content2 p {
+            margin: 5px 0;
+
+
+        }
+        
+        .text-content .highlight {
+            color: #557140; /* 橙色 */
+            text-align: center;
+            line-height: 1;
+            font-size: 16px;
+        }
+        .text-content .note {
+            font-style: italic;
+            color: #555; /* 灰色 */
+        }
+        .text-content2 .note {
+            font-style: italic;
+            color: #555; /* 灰色 */
+        }
+        .text-content .note2 {
+            color: #da7d7d; /* 灰色 */
+        }
+        
+        .container p {
+            font-size: 1.5em;
+        
+        }
+        .audio-link {
+            margin: 1em 0;
+        }
+        .center {
+            text-align: center;
+        }
+        .center img {
+            width: 500px; /* 设置图片宽度为父元素宽度的50%，可以根据需要调整 */
+            display: block; /* 让图片居中显示 */
+            margin: 0 auto; /* 使用 margin 属性自动居中 */
+        
+        }
+        .audio-controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .section-label {
+            display: block;
+            text-align: center;
+            background-color: #67cced; /* 淡藍色 */
+            color: white;
+            font-size: 20px; /* 比正文字體大 */
+            padding:10px 0;
+            margin: 20px 0;
+            margin-right: -32px;
+            margin-left: -32px;
+            font-weight: bold;
+        }
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+            margin-top: -5px;
+            width: 80%; /* 或设置一个固定宽度 */
+            max-width: 800px; /* 最大宽度，防止过宽 */
+        }
+        .video-container2 {
+            text-align: center;
+            margin: 20px 0;
+            margin-left: 10%;
+            margin-top: -5px;
+            width: 80%; /* 或设置一个固定宽度 */
+            max-width: 800px; /* 最大宽度，防止过宽 */
+        }
+        video {
+            width: 100%; /* 播放器宽度占满容器 */
+            height: auto; /* 高度自适应 */
+        }
+        
+        a {
+            color: inherit; /* 使用父元素的字體顏色 */
+            text-decoration: none;
+        }
+        @media (min-width: 600px) {
+            .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-bottom: 40px;
+            margin-left: 55px; /* 左边距 */
+            margin-right: 55px; /* 右边距 */
+            border: 2px solid #67cced;
+            }
+            .content img {
+                width: 50%;
+            }
+            .back {
+            margin-left: 55px; /* 左边距 */
+            margin-right: 25px; /* 右边距 */
+            }
+            .section-label {
+            margin-right: -32px;
+            margin-left: -32px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../../../../main_header2.JPG" alt="背景图片">
+        <a href="../../../../index.html">
+            <img src="../../../../logo.png" alt="网站Logo" class="logo">
+        </a>
+    </header>
+    <div class="back">
+        <p><a href="../../../../index.html">首頁 &gt; <a href="../../../category1.html">考古館 &gt; <a href="../history_of_tomorrow_a.html">自傳 &gt; </a>成名在望</p>
+    </div>
+    <div class="content">
+        
+        <div class="audio-controls"> 
+            <p>BGM:成名在望demo <a href="almost_famous_demo.mp3" download="almost_famous_demo.mp3"></a></p>
+            <audio id="myAudio" src="almost_famous_demo.mp3" controls autoplay></audio><br>
+            <button onclick="toggleAudio()">播放/暫停</button>
+            <button onclick="restartAudio()">重新播放</button>
+        </div>
+    
+        <div class="section-label">阿信的博客</div>
+        <div class="audio-link">
+            <h2>八千里路 雲和月</h2>
+            <h3><a style="text-decoration: underline;" href="https://blog.sina.com.cn/s/blog_4b66ade8010009us.html">阿信 2007-10-17 16:16:58</a></h3>
+        </div>
+        <div class="text-content">
+            <img src="almost_famous_b_1.jpeg" style="display: block; float: left;" alt="图片">
+            <div style="clear: both;"></div>
+            <br>
+            <p>小時候，在我家客廳，<br>從某個時候開始，就有個光頭主持人，掀起了某種壓抑與好奇後的收視熱潮。</p>
+            <br>
+            <p>每當騰格爾用一種介於狼跟人類之間的聲音，呼嘯出片頭曲的時候，<br>就會有一片如遼闊山谷的回音，像黃綠色的地毯，瞬間鋪展在想像的平原上。</p>
+            <br>
+            <p>電視畫面中，接著開始播送出，來自陌生而遙遠的世界的影像。<br>是時候跟著光頭帥哥，去採風探奇了！<br>它叫「八千里路雲和月」，</p>
+            <br>
+            <br>
+            <img src="almost_famous_b_2.jpeg" style="display: block; float: left;" alt="图片">
+            <div style="clear: both;"></div>
+            <br>
+            <p>然後，長大了，卻從來沒想過，<br>有一天，竟然要像那個光頭帥哥一樣，<br>一處一處的去踏過這個無邊無際的黃色陸塊，</p>
+            <br>
+            <p>而且是用一種很變態的行程，<br>時常是一兩天就要飛一個城市。</p>
+            <br>
+            <p>那種滋味，<br>沒有真的體驗過，我想真的是，無法瞭解。</p>
+            <br>
+            <p>光頭帥哥，你辛苦了。</p>
+            <br>
+            <p>如果有機會，請你看一看這本書，<br>就算沒能真的體驗「萬里狂奔」，<br>至少也能感受<br><p style="text-indent: -10px; line-height: 0.5em;">「八千里路有夠累」。</p>
+            <br>
+            <br>
+            <img src="almost_famous_b_3.jpeg" style="display: block; float: left;" alt="图片">
+            <div style="clear: both;"></div>
+            <p class="highlight" style="text-indent: 0em; font-size: 14px; color:black; text-align: left;">photo by 黃婷 in taipei dome</p>
+            <br>
+            <img src="almost_famous_b_4.jpeg" style="display: block; float: left;" alt="图片">
+            <div style="clear: both;"></div>
+            <p class="highlight" style="text-indent: 0em; font-size: 14px; color:black; text-align: left;">photo by 黃婷 in taipei dome</p>
+            <br>
+            <img src="almost_famous_b_5.jpeg" style="display: block; float: left;" alt="图片">
+            <div style="clear: both;"></div>
+            <p class="highlight" style="text-indent: 0em; font-size: 14px; color:black; text-align: left;">photo by 黃婷 in taipei dome</p>
+            <br>
+            <img src="almost_famous_b_6.jpeg" style="display: block; float: left;" alt="图片">
+            <div style="clear: both;"></div>
+            <p class="highlight" style="text-indent: 0em; font-size: 14px; color:black; text-align: left;">photo by 黃婷 in taipei dome</p>
+            <br>
+            <br>
+            <img src="almost_famous_b_7.jpeg" style="display: block; float: left;" alt="图片">
+            <div style="clear: both;"></div>
+            <p class="highlight" style="text-indent: 0em; font-size: 14px; color:black; text-align: left; line-height: 1.5em;">這世界有一種叫做信念的東西，<br>是可以讓人連性命都不要的！</p>
+            <p style="font-weight: bold; line-height: 1em;">萬里狂奔</p>
+            <p style="line-height: 1em;" 1em;>攝影+文字：黃婷</p>
+            <br>
+            <br>
+            <p style="line-height: 1em;" 1em;>黃婷部落格：</p>
+            <p style="color: rgb(73,113,165); line-height: 1em;" >http://www.wretch.cc/blog/yijia</p>
+         
+        <div class="section-label">阿信的微博</div>
+        <div class="audio-link">
+            <h2 style="text-indent: -14px;">「成名在望」</h2>
+            <h3><a style="text-decoration: underline;" href="https://weibo.com/1265020392/4147254019155977">阿信 17-09-01 19:37</a></h3>
+        </div>
+       
+        <div class="text-content">
+
+            <p>此刻的你，是在教室中苦讀？辦公室裡加班？或擠在滿是人群的巴士地鐵中呢？ 你曾經幻想自己身在不同的地方，做著不一樣的事嗎？</p>
+            <p>上個世紀末，當時的我們，都剛滿弱冠之年。滿口音樂、充滿幻想、背著吉他的傢伙，絕對是不被世界瞭解的一群。在那個年代，網路依然是撥接、錄音室超昂貴、極少有演出舞台，以玩樂團作為一生志業被認為絕不可能。⋯那是個成天被長輩叨念、被同輩嘲笑的年代。</p>
+            
+            <p style="text-indent: -10px;">「你們為什麼不幹點正經事？」那是個總被這麼說的年代。</p>
+            
+            <p>-</p>
+            
+            <p>有點阿Q的我們，依然分頭打工賺錢，終於買下一部四軌卡式錄音座，在學業、打工的夾縫裡，以極為簡陋的器材，完成了第一張Demo小樣，投遞到不可能的唱片公司。</p>
+            
+            <p>那些年裡，我們用一首一首的創作，一場一場的演唱，試著融化萬千冷眼，說服無數熱諷，⋯略過了百轉千迴的磨練與奔波，後來的五月天，終於在此刻走到你的面前。</p>
+            
+            <p>-</p>
+            
+            <p style="text-indent: -10px;">「每個人心中，都有一座堅守到底的小屋」</p>
+            
+            <p>每當被世界孤立之時，我心中總會出現那座小屋。你我心中都有一份不肯放棄的理想與憧憬，但現實世界的人們，都因著種種的原因，嘗試將你逼出小屋，要你回歸現實。</p>
+            
+            <p>故事中的少年，死守著千瘡百孔的小屋，在四面楚歌的攻堅下，始終緊握吉他，不肯放手，一連串現實與幻想融合的挑戰，在冷調的敘述中，隨著音樂場景越趨激昂，步步走向未知的結局⋯⋯。</p>
+            
+            <p>-</p>
+            
+            <p style="text-indent: -10px;">「成名在望」歌曲幾乎沒有重複的音樂段落，敘事與抒情穿插的歌詞，令MV的構想很不容易。導演阿木又一次以故事手法成功達陣，而擔綱主演的千璽，不論日曬雨淋或特效場面，在破百小時的沈重拍攝行程中，始終全力以赴，而成果完全展現在作品之中。</p>
+            
+            <p>身上背負了「偶像」兩字的他們，為了爭取更多人們的肯定，犧牲了同齡孩子們的玩樂時間，一路獲得了越來越多的認同。在他們身上，彷彿看到了少年當年想要證明自己的身影。逆境中，你我誰不是如此呢？</p>
+            
+            <p>-</p>
+            
+            <p>五月天的小屋，從最初的「怪獸家」到吉他社，從現在的「大雞腿」到全世界，我們的小屋曾經危機、頹圮，而如今因為有你守護，終於自由飛翔有如「移動城堡」⋯</p>
+            
+            <p>而「成名在望」這首歌描述的不只是五月天，也是深陷四面楚歌中還不願放棄的每一個人。你的小屋是什麼？ 有什麼，是你永遠不放棄？⋯</p>
+            
+            <p style="text-indent: -10px;">「成名在望 無關真相 如果你心始終信仰」<br> <p style="line-height: 0em; text-indent: -10px; margin-bottom: 1em;">「你就能飛翔」。</p>
+            
+            <p>希望能將這首歌<br>獻給每個懷抱不凡憧憬的平凡你我。</p>
+            
+            <p>-</p>
+            
+            <p>ps. 希望未來也能邀請千璽、俊凱與王源三位夥伴共同呈現更精彩的合作，再度感謝。</p>
+            
+            <p>pps. 感謝堅持選擇這首歌的YOHO支持拍攝，讓這部幻想中的影像作品成真。</p>
+            <p style="line-height: 0.5em;"><br></p>
+            <p style="margin-bottom: 0em; line-height: 0em;">-</p>
+        
+            <p>成名在望 Almost Famous | 夢想小屋版MV</p>
+            <div class="video-container">
+                <video controls>
+                    <source src="almost_famous.mp4" type="video/quicktime">
+                    您的浏览器不支持 video 标签。
+                </video>
+            </div>
+        </div>
+        <div class="text-content2">
+            <p>詞曲／阿信<br>演奏／五月天<br>特別演出／易烊千璽<br>共同演出 / 羅北安 寶媽<br>表演設計 ／許傑輝<br>視覺特效／仙草影像<br>導演／陳奕仁</p>
+            <p>.</p>
+            <p style="color: rgb(73,113,165);">#五月天成名在望#<br>#易烊千玺出演五月天mv#</p>
+            <p>.</p>
+            <p style="color: rgb(73,113,165);">@TFBOYS-易烊千玺 @五月天<br>@YOHO潮流志 @仙草影像</p>
+            <br></p>
+        </div>
+            <p style="text-align: center; text-indent: 0em;">------------------------------------------------------------------- </p>
+        <div class="audio-link">
+                <h2 style="text-indent: -14px;">「聊聊成名在望的作曲吧」</h2>
+                <h3><a style="text-decoration: underline;" href="https://weibo.com/1265020392/4151655014222140">阿信 17-09-13 23:05</a></h3>
+        </div>
+        <div class="text-content">
+                <p>一直以來，大家比較常跟我討論作詞的部份，不過在整個五月天的創作生涯中，「作曲」一直是我認為重要性不下於作詞的一個部分。一首吸引人的曲子，能夠讓歌曲的力量更為強大，因此我對於作曲、編曲所花的時間精神，也不下於作詞的部份。</p>
+                <br>
+                <p>從早期僅用單純的木吉他寫歌，後來我也嘗試用電吉他樂句來組織一首曲子，從「人生海海」這張專輯開始，我也開始用 MIDI 合成器來創作，它讓我有了更多不同類型創作的可能性。</p>
+                <br>
+                <p>如果靈感來自於某種「音樂氛圍」而不是旋律，我會去構思一首歌我想要的畫面，試著做出初步的編曲，然後在其中加入演唱的旋律，例如「盛夏光年」、「2012」、與今天討論的「成名在望」，都是以編曲先行的方式呈現出來。</p>
+                <br>
+                <p>作曲的時候我，由於大部分都是獨自創作，因此 MIDI 能讓我能模擬團員的樂器演奏部分，影片裡「成名在望」DEMO，你聽到的所有聲音與樂器，鋼琴、吉他、貝斯、鼓等等......，都是由我自己以合成器完成，它聽來雖然粗糙，不過已經足夠我跟團員與企劃組的溝通。</p>
+                <br>
+                <p>大部分的歌，在團員的加入後，會發生很大的變化。真實的拿起樂器，興奮的共同演奏，一直是我們讓音樂擁有靈魂的最佳秘訣。</p>
+                <p>不過，例如「成名在望」，DEMO 的雛形已經很明顯，後期團員的加入後的變化則是在細節上，讓音樂變得更細膩與熱烈，特別值得一提的是，我在電吉他間奏的部份，給吉他手出了頗難的考題，我用了很奇怪的和弦進行來鋪陳上下段落的轉調，留下燙手山芋給團員玩弄。</p>
+                <br>
+                <p>不過很結果很顯然的，怪獸編出了非常動人的吉他 SOLO！ (我給怪獸吉他solo史的前三名哈) 因此，最終的完成版本，我還加了 DEMO 中沒有的段落，讓他再玩的更「過癮」 (惡魔笑)。另外，這首歌我們也邀請了優秀的音樂人陶山與鋼琴家官大為，增添了靈魂樂的吟唱橋段，以及暴風雨般的鋼琴演奏段落。</p>
+                <br>
+                <p style="text-indent: -10px;">「成名在望」當初在作曲的時候，就想要以打破一般流行樂的結構進行，所以整首曲子的速度、韻律、拍子甚至調性，都一直在變化，老實說玩的時候非常過癮，但後遺症就是......，寫詞的時候讓自己大傷腦筋（哈哈）。</p>
+                <br>
+                <p>來聽聽「成名在望」阿信DEMO版 吧！</p>
+                <div class="video-container">
+                    <video controls>
+                        <source src="almost_famous_demo.mp4" type="video/quicktime">
+                        您的浏览器不支持 video 标签。
+                    </video>
+                </div>
+                <div class="text-content2">
+                <p style="color: rgb(73,113,165);">#五月天成名在望#<br>#五月天自传#</p>
+        </div>        
+            <p class="note" style="text-indent: 0em;"><br></p>
+
+
+        
+        <div class="section-label">歌曲信息</div>
+            <div class="text-content2">
+                <p>
+                    <span style="font-size: 1.5em; font-weight: bold;">成名在望 </span>
+                    <span>（詞曲:阿信）</span>
+                </p>
+                <br>
+                <p>找一個和弦開始唱 那故事遺忘的時光</p>
+                <p>起點是那平凡的成長 或初學吉他時 少年們 的模樣</p>
+                <br>
+                <p>那一年的舞台 沒掌聲 沒聚光 只有盆地邊緣 不認輸 的倔強</p>
+                <p>排練室的日夜 在爭論 在激盪 以音量去吞噬 無退路 的徬徨</p>
+                <br>
+                <p style="text-indent: -6px;">｜那黑的終點可有光 那夜的盡頭可會亮</p>
+                <p style="text-indent: -6px;">｜那成名在望 會有希望 或者是 無知的狂妄</p>
+                <p style="text-indent: -6px;">｜那又會怎麼樣 「那又會怎麼樣？」</p>
+                <br>
+                <p>混跡過酒場的駐唱 才讀懂人性的尋常</p>
+                <p>背負過音樂節的重量 才體會每場仗 都仰賴 槍與糧</p>
+                <br>
+                <p>夢是把熱血和 汗與淚 熬成湯 澆灌在乾涸的 貧瘠的 現實上</p>
+                <p>當日常的重量 讓我們 不反抗 倒地後才發現 荒地上 渺茫 希望 綻放</p>
+                <br>
+                <p>穿過了</p>
+                <p>搖滾或糖霜 昧俗或理想 批判或傳唱 道路上</p>
+                <p>只能看遠方 最遠的地方 應許的他方 不停衝撞</p>
+                <br>
+                <p>看過多少臉龐 飛過多少異鄉</p>
+                <p>少年早已蒼茫 回頭望 我在何方</p>
+                <br>
+                <p>一站又一站的流浪 那旅館和空港 一遍又一遍的採訪 和攻防</p>
+                <p>一雙又一雙的目光 像監獄和高牆 牆裡的風光是不是 如當初想像？</p>
+                <br>
+                <p style="text-indent: -6px;">｜那黑的終點可有光 那夜的盡頭可會亮</p>
+                <p style="text-indent: -6px;">｜那成名在望 是否風光 或者是 瘋狂的火光</p>
+                <p style="text-indent: -6px;">｜那又該怎麼樣 「那又能怎麼樣？」</p>
+                <br>
+                <p>While we were so young 我夢到當時 我們翻過牆</p>
+                <p>曼陀羅花* 沿途綻放 我們光腳越過人間荒唐</p>
+                <p>We're stupid but strong 放學的屋頂 像萬人廣場</p>
+                <p>從不多想 只是信仰 少年回頭望 笑我「還不快跟上？」</p>
+                <br>
+                <p>那路的起點誰能忘 那路的盡頭誰在唱</p>
+                <p>誰成名在望 誰曾失望 卻更多 的誰在盼望</p>
+                <br>
+                <p style="text-indent: -6px;">｜那黑的終點可有光 那夜的盡頭天將亮</p>
+                <p style="text-indent: -6px;">｜那成名在望 無關真相 如果你 心始終信仰</p>
+                <p style="text-indent: -6px;">｜誰又能怎樣？ 誰又能怎樣？</p>
+                <br>
+                <p style="text-indent: -10px;">「你就能飛翔」</p>
+                <br>
+                <p class="note"></p>
+                <p class="note" style="font-size: 14px; text-indent: 0em; ">*[曼陀羅花] <br>茄科類曼陀羅屬植物，有麻醉與迷幻效果， <br>據稱在前往天堂的路上，如果停步沉迷於此花香，就會喪失前往天堂的能力與意志。 </p>
+            </div>
+  
+        <div class="section-label">微博互動</div>
+        <div class="text-content">
+            <h3 style="text-indent: 0em;">MV幕後特輯</h3>
+            <img src="almost_famous_1.jpg" alt="图片">
+            <br>
+            <div class="video-container2">
+                <video controls>
+                    <source src="almost_famous_1.mp4" type="video/quicktime">
+                    您的浏览器不支持 video 标签。
+                </video>
+            </div>
+            <h3 style="text-indent: 0em;">「樂團時代版」MV</h3>
+            <img src="almost_famous_2_1.JPG" alt="图片">
+            <img src="almost_famous_2_2.JPG" alt="图片">
+            <p class="note" style="font-size: 14px; text-indent: 0em; text-align: center; font-style: normal;">-- 無MV可分享，不歡迎落井下石的人，是本站的態度 --</p>
+            <h3 style="text-indent: 0em;">MDSZ集合！</h3>
+            <img src="almost_famous_3_1.jpg" alt="图片">
+            <img src="almost_famous_3_2.jpg" alt="图片">
+            <p class="note" style="font-size: 14px; text-indent: 0em; text-align: center;">*他第一次在小紅書發布時因圖片帶網址而被判違規，這是他首次違規，之後還會因同樣的原因違規🤭。</p>
+            <h3 style="text-indent: 0em;">5525鳥巢版Live</h3>
+            <img src="almost_famous_4.jpg" alt="图片">
+            <br>
+            <div class="video-container2">
+                <video controls>
+                    <source src="almost_famous_nest.mp4" type="video/quicktime">
+                    您的浏览器不支持 video 标签。
+                </video>
+            </div>
+            <br>
+            <p style="text-align: center; color: #7d7d7d;">--未完待續--</p>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('myAudio');
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        function restartAudio() {
+            audio.currentTime = 0;
+            audio.play();
+            function playAudioOnFirstInteraction() {
+            audio.play().catch(error => {
+                console.log('Audio playback was prevented:', error);
+            });
+            // 移除事件监听器，以避免重复触发
+            document.removeEventListener('click', playAudioOnFirstInteraction);
+            document.removeEventListener('touchstart', playAudioOnFirstInteraction);
+        }
+
+        // 添加事件监听器，检测用户的第一次交互
+        document.addEventListener('click', playAudioOnFirstInteraction);
+        document.addEventListener('touchstart', playAudioOnFirstInteraction);
+        }
+    </script>
+</body>
+</html>
