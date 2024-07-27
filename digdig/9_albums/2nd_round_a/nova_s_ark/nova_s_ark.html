@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二人生-諾亞方舟</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            
+        }
+        header {
+            position: relative;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        header img {
+            width: 100%;
+            height: auto;
+            
+        }
+        header .logo {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5%; /* 设置图片宽度，可根据需要调整 */
+            z-index: 1;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1)) invert(100%);
+        }   
+        .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-bottom: 20px;
+            margin-left: 15px; /* 左边距 */
+            margin-right: 15px; /* 右边距 */
+            border: 2px solid #67cced;
+        }
+
+        .back {
+            padding-left: 0;
+            margin-left: 15px; /* 左边距 */
+            margin-right: 15px; /* 右边距 */
+            text-decoration: none;
+        }
+        .content img {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .text-content {
+            margin-bottom: 1.5em;
+            font-size: 18px;
+            line-height: 1.5em;
+        }
+        .text-content2 {
+            margin: 20px 0;
+            font-size: 18px;
+           
+        }
+        .text-content p {
+            margin: 0px 0;
+        
+        }
+        .text-content2 p {
+            margin: 5px 0;
+        }
+        
+        .text-content .highlight {
+            color: #557140; /* 橙色 */
+            text-align: center;
+            line-height: 1;
+            font-size: 16px;
+        }
+        .text-content .note {
+            font-style: italic;
+            color: #555; /* 灰色 */
+            line-height:1em;
+            
+        }
+        .text-content2 .note {
+            font-style: italic;
+            color: #555; /* 灰色 */
+        }
+        .text-content .note2 {
+            color: #da7d7d; /* 灰色 */
+        }
+        
+        .container p {
+            font-size: 1.5em;
+        
+        }
+        .audio-link {
+            margin: 1em 0;
+        }
+        .center {
+            text-align: center;
+        }
+        .center img {
+            width: 500px; /* 设置图片宽度为父元素宽度的50%，可以根据需要调整 */
+            display: block; /* 让图片居中显示 */
+            margin: 0 auto; /* 使用 margin 属性自动居中 */
+        
+        }
+        .audio-controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .section-label {
+            display: block;
+            text-align: center;
+            background-color: #67cced; /* 淡藍色 */
+            color: white;
+            font-size: 20px; /* 比正文字體大 */
+            padding:10px 0;
+            margin: 20px 0;
+            margin-right: -32px;
+            margin-left: -32px;
+            font-weight: bold;
+        }
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+            margin-top: -5px;
+            width: 80%; /* 或设置一个固定宽度 */
+            max-width: 800px; /* 最大宽度，防止过宽 */
+        }
+        video {
+            width: 100%; /* 播放器宽度占满容器 */
+            height: auto; /* 高度自适应 */
+        }
+        
+        a {
+            color: inherit; /* 使用父元素的字體顏色 */
+            text-decoration: none;
+        }
+        @media (min-width: 600px) {
+            .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-bottom: 40px;
+            margin-left: 55px; /* 左边距 */
+            margin-right: 55px; /* 右边距 */
+            border: 2px solid #67cced;
+            }
+            .content img {
+                width: 50%;
+            }
+            .back {
+            margin-left: 55px; /* 左边距 */
+            margin-right: 25px; /* 右边距 */
+            }
+            .section-label {
+            margin-right: -32px;
+            margin-left: -32px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../../../../main_header2.JPG" alt="背景图片">
+        <a href="../../../../index.html">
+            <img src="../../../../logo.png" alt="网站Logo" class="logo">
+        </a>
+    </header>
+    <div class="back">
+        <p><a href="../../../../index.html">首頁 &gt; <a href="../../../category1.html">考古館 &gt; <a href="../2ndlife_a.html">第二人生 &gt; </a>諾亞方舟</p>
+    </div>
+    <div class="content">
+        
+        <div class="audio-controls"> 
+            <p>BGM:諾亞方舟demo <a href="ark_demo.mp3" download="ark_demo.mp3">下载</a></p>
+            <audio id="myAudio" src="ark_demo.mp3" controls autoplay></audio><br>
+            <button onclick="toggleAudio()">播放/暫停</button>
+            <button onclick="restartAudio()">重新播放</button>
+        </div>
+    
+        <div class="section-label">阿信的微博</div>
+        <div class="audio-link">
+            <h2>好好好想見到⋯你</h2>
+            <h3><a style="text-decoration: underline;" href="https://weibo.com/1265020392/4852141909346241">阿信 2022-12-29 22:30</a></h3>
+        </div>
+        <div class="text-content">
+            <p class="highlight" style="text-indent: 0em;"></p>
+            <p>你們聽的幾張五月天專輯，其實⋯是一隻貓製作的，他叫菜頭粿。</p><br>
+            <p>菜頭粿，是一隻白色不知道什麼品種的貓，兩隻眼睛顏色不一樣。因為是瑪莎的貓，所以就跟著瑪莎姓蔡了。</p><br>
+            <p>靈感不來的時候，撸貓會是很有幫助的手段，大方的瑪莎，就讓他住在錄音室，成為了五月天的團貓。</p><br>
+            <p>/</p><br>
+            <p>錄音的時候，他喜歡坐在製作人的位置上，我們只好都去坐在邊角。他老大皺著眉頭，好像真的在聽。</p><br>
+            <p>覺得不好的時候，他會回頭看著團員，一副「我就跟你說不是這樣了」的神情。</p><br>
+            <p>那些年，我們不知道幾次衝出錄音室找尋失蹤的他，絕望的回錄音室，他老大坐在門口等我們，眼神寫著「你們在瞎忙什麼啊」？</p><br>
+            <p>寫歌的時候，他睡在我的鍵盤上，讓我不能打字；睡覺的時候，他睡在我的臉上，讓我不能呼吸。</p><br>
+            <p>/</p><br>
+            <p>而他離開了以後，他一直在我們的心上，讓我們不能忘記他。</p><br>
+            <p>上次的諾亞方舟，他還在錄音室睡在我們的演出服堆裡呢⋯。</p><br>
+            <p>這次方舟，真的復刻重啟了，但服裝上，再也沒有他讓我們黏不完的貓毛。</p><br>
+            <p>好多的人事物，都像菜頭粿，消失在我們的視線裡，暫別在我們的故事裡，淡出在我們的人生裡⋯。</p><br>
+            <p>/</p><br>
+            <p>謝謝你們，曾經在我的回憶裡，像是方舟航行中，途經了最美的朝霞與星空。</p><br>
+            <p>好好好想見到你。</p>
+            <br>
+            <p>.</p>
+            <p style="color:deepskyblue;">#喵星人#</p>
+            <p style="color:deepskyblue;">#來曬曬你的愛貓吧#</p>
+            <p style="color:deepskyblue; margin-bottom: 1em;">#一条Plog告别2022#</p>
+            <img src="nova_s_ark_1.jpeg" alt="图片">
+            <p style="text-align: center; text-indent: 0em;"></p>
+            <div class="note">
+            <p style="font-size: 0.8em; margin-top: 1em;" >*為什麼是這篇微博？在FLY TO 2023之後，每次聽到諾亞方舟，我都會想起菜頭粿和團員告別，乘船遠去的場景，不由得也泛起淚光。這是一首講告別的歌，學會告別，才能學會珍惜。</p>
+            <p style="text-align: center; margin-top: 1.5em;"> -- 僅借此篇懷念遠去的阿貴和大船巡迴 --</p>
+            </div>
+            <p style="text-indent: 0em; padding-bottom: 0em;"></p>
+            <div class="video-container">
+                <video controls>
+                    <source src="fool.mov" type="video/quicktime">
+                    您的浏览器不支持 video 标签。
+                </video>
+            </div>
+            <p class="note" style="text-indent: 0em;"></p>
+        </div>
+        <div class="section-labe"></div>
+        
+        <div class="text-content2">
+            <p>
+            <im src=".jpeg" style="display: block; float: left;" alt="图片">
+            <div style="clear: both;"></div>
+        
+        </div>
+        <div class="section-label">歌曲信息</div>
+            <div class="text-content2">
+                <p>
+                    <span style="font-size: 1.5em; font-weight: bold;">諾亞方舟  </span>
+                    <span>（詞:阿信&nbsp;&nbsp;&nbsp;曲:瑪莎）</span>
+                </p>
+                <br>
+                <p>再見 草莓甜甜圈 街角咖啡店 落下雨點</p>
+                <p>再見 黑白老照片 回憶電影院 埋進地面</p>
+                <p>再見 我們初識的那個公園 那天是誰先吻了誰 被誰遺忘的鞦韆</p>
+                <p>再見 那麼多名車名錶名鞋 最後我們只能帶走 名為回憶的花園</p>
+                <br>
+                <p>如果要告別 如果今夜就要和一切告別</p>
+                <p>如果你只能打一通電話 你會撥給誰</p>
+                <br>
+                <p>晚安 鸚鵡和孔雀 花豹和人類 望著海面</p>
+                <p>晚安 底片和唱片 沉浮在浪間 就像詩篇</p>
+                <p>晚安 自由女神漂到華爾街 我們在甲板上摸到 杜拜塔頂的塔尖</p>
+                <p>晚安 海豚躍出西藏的屋簷 原來幻想中的這天 會比幻想更唯美</p>
+                <br>
+                <p>還是要告別 還是放棄海拔以下的世界</p>
+                <p>你會裝進什麼回憶紀念 在行李裡面</p>
+                <p>終於要告別 終於沒有更多的明天要追</p>
+                <p>你有什麼遺憾依然殘缺 還沒有完美</p>
+                <br>
+                <p>當彗星燃燒天邊 隕石像雨點</p>
+                <p>當輻射比陽光還要熾烈</p>
+                <p>當愛變得濃烈 當每段命運 更加壯烈</p>
+                <p>當永遠變成一種遙遠 當句點變成一種觀點</p>
+                <p>讓人類終於變成同類</p>
+                <br>
+                <p>勇敢的告別 勇敢地向過去和未來告別</p>
+                <p>告別每段血緣身分地位 聰明或愚昧</p>
+                <p>最後的告別 最後一個心願是學會高飛</p>
+                <p>飛在不存在的高山草原 星空和藍天</p>
+                <br>
+                <p>讓 諾亞方舟 航向了 海平線</p>
+                <p>讓 諾亞方舟 航向了 換日線</p>
+                <p>讓 諾亞方舟 航向了 天際線</p>
+                <p>讓 諾亞方舟 航向了 無限</p>
+                <p class="note"></p>
+                <br>
+                <p class="note" style="font-size: 14px; text-indent: 0em; "></p>
+            </div>
+  
+        <div class="section-label">微博互動</div>
+        <div class="text-content">
+            <h3 style="text-indent: 0em;">變成...?</h3>
+            <img src="nova_s_ark_2.png" alt="图片">
+            <h3 style="text-indent: 0em;">學會告別，學會珍惜</h3>
+            <img src="nova_s_ark_3.png" alt="图片">
+            <p class="note" style="font-size: 14px; text-indent: 0em; text-align: center;">*前文下面的評論</p>
+            
+            <br>
+            <p style="text-align: center; color: #7d7d7d;">--未完待續--</p>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('myAudio');
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        function restartAudio() {
+            audio.currentTime = 0;
+            audio.play();
+            function playAudioOnFirstInteraction() {
+            audio.play().catch(error => {
+                console.log('Audio playback was prevented:', error);
+            });
+            // 移除事件监听器，以避免重复触发
+            document.removeEventListener('click', playAudioOnFirstInteraction);
+            document.removeEventListener('touchstart', playAudioOnFirstInteraction);
+        }
+
+        // 添加事件监听器，检测用户的第一次交互
+        document.addEventListener('click', playAudioOnFirstInteraction);
+        document.addEventListener('touchstart', playAudioOnFirstInteraction);
+        }
+    </script>
+</body>
+</html>
