@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>時光機-九號球</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            
+        }
+        header {
+            position: relative;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        header img {
+            width: 100%;
+            height: auto;
+            
+        }
+        header .logo {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5%; /* 设置图片宽度，可根据需要调整 */
+            z-index: 1;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1)) invert(100%);
+        }   
+        .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-bottom: 20px;
+            margin-left: 15px; /* 左边距 */
+            margin-right: 15px; /* 右边距 */
+            border: 2px solid #67cced;
+        }
+
+        .back {
+            padding-left: 0;
+            margin-left: 15px; /* 左边距 */
+            margin-right: 15px; /* 右边距 */
+            text-decoration: none;
+        }
+        .content img {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .text-content {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .text-content2 {
+            margin: 20px 0;
+            font-size: 18px;
+           
+        }
+        .text-content p {
+            margin: 10px 0;
+        }
+        .text-content2 p {
+            margin: 5px 0;
+        }
+        
+        .text-content .highlight {
+            color: #557140; /* 橙色 */
+            text-align: center;
+            line-height: 1;
+            font-size: 16px;
+        }
+        .text-content .note {
+            font-style: italic;
+            color: #555; /* 灰色 */
+        }
+        .text-content2 .note {
+            font-style: italic;
+            color: #555; /* 灰色 */
+        }
+        .text-content .note2 {
+            color: #da7d7d; /* 灰色 */
+        }
+        
+        .container p {
+            font-size: 1.5em;
+        
+        }
+        .audio-link {
+            margin: 1em 0;
+        }
+        .center {
+            text-align: center;
+        }
+        .center img {
+            width: 500px; /* 设置图片宽度为父元素宽度的50%，可以根据需要调整 */
+            display: block; /* 让图片居中显示 */
+            margin: 0 auto; /* 使用 margin 属性自动居中 */
+        
+        }
+        .audio-controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .section-label {
+            display: block;
+            text-align: center;
+            background-color: #67cced; /* 淡藍色 */
+            color: white;
+            font-size: 20px; /* 比正文字體大 */
+            padding:10px 0;
+            margin: 20px 0;
+            margin-right: -32px;
+            margin-left: -32px;
+            font-weight: bold;
+        }
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+            margin-top: -5px;
+            margin-left: 10%;
+            width: 80%; /* 或设置一个固定宽度 */
+            max-width: 800px; /* 最大宽度，防止过宽 */
+        }
+        .video-container2 {
+            text-align: center;
+            margin: 20px 0;
+            margin-top: -5px;
+            width: 80%; /* 或设置一个固定宽度 */
+            max-width: 800px; /* 最大宽度，防止过宽 */
+        }
+        video {
+            width: 100%; /* 播放器宽度占满容器 */
+            height: auto; /* 高度自适应 */
+        }
+        
+        a {
+            color: inherit; /* 使用父元素的字體顏色 */
+            text-decoration: none;
+        }
+        @media (min-width: 600px) {
+            .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-bottom: 40px;
+            margin-left: 55px; /* 左边距 */
+            margin-right: 55px; /* 右边距 */
+            border: 2px solid #67cced;
+            }
+            .content img {
+                width: 50%;
+            }
+            .back {
+            margin-left: 55px; /* 左边距 */
+            margin-right: 25px; /* 右边距 */
+            }
+            .section-label {
+            margin-right: -32px;
+            margin-left: -32px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../../../../main_header2.JPG" alt="背景图片">
+        <a href="../../../../index.html">
+            <img src="../../../../logo.png" alt="网站Logo" class="logo">
+        </a>
+    </header>
+    <div class="back">
+        <p><a href="../../../../index.html">首頁 &gt; <a href="../../../category1.html">考古館 &gt; <a href="../time_machine_a.html">時光機 &gt; </a>九號球</p>
+    </div>
+    <div class="content">
+        
+        <div class="audio-controls"> 
+            <p>BGM:九號球 [ver.《逆轉勝》主題曲（怪獸彈唱版）] <a href="9_ball.MP3" download="9_ball.mp3"></a></p>
+            <audio id="myAudio" src="9_ball.MP3" controls autoplay></audio><br>
+            <button onclick="toggleAudio()">播放/暫停</button>
+            <button onclick="restartAudio()">重新播放</button>
+        </div>
+        <div class="section-label">怪獸的微博</div>
+        
+        <div class="text-content2">
+            <p>
+            <img src="9_ball_m_1_1.jpg"  alt="图片">
+            <img src="9_ball_m_1_2.JPG" style="width: 75%;" alt="图片">
+
+            <div style="clear: both;"></div>
+        
+        </div>
+        <div class="section-label">阿信的博客</div>
+        <div class="audio-link">
+            <h2>逆轉，人生。</h2>
+            <h3><a style="text-decoration: underline;" href="https://blog.sina.com.cn/s/blog_4b66ade80102v5tm.html">阿信 2014-11-14 05:24:44</a></h3>
+        </div>
+        <img src="9_ball_1.png" style="display: block; float: left;" alt="图片">
+        <div style="clear: both;"></div>
+            <div class="text-content">
+            <p><br></p>
+            <p>在大学时，我曾为一家连锁撞球店打工，工作内容是制作POP海报。每个周末，我常常一个人待在学校工作室外的空地上，连续制作60张海报，然后扛到撞球店。在那段时间，我不仅沉浸于海报制作的工作，也窥见了撞球馆中各种人生百态。</p>
+            <br>
+            <p>今晚，我和好友导演阿木（五月天《乾杯》、蔡依林《我呸》）一起观看了电影《逆转胜》二刷。孔玟燕导演在场面调度与剧本发挥方面一直是他的强项，电影中的流畅故事与音乐，展示了小香的早熟与执着，怪兽教练的幽默派颓废，以及其他演员的精彩表演。</p>
+            <br>
+            <p>回想当年打工的岁月，那些周末被海报制作和练团占满，几乎没有时间看电影。没想到，现在五月天与电影有了如此多的关联，怪兽主演的《逆转胜》正在热映，林书宇导演的作品也在进行中，五人也录制了黄飞鸿电影的主题曲。这些经历为他们的创作提供了丰富的灵感素材。</p>
+            <br>
+            <p>虽然那段海报生涯已经过去，我画了无数撞球，抄写了上万条规则，却从未真正打过一场撞球。但这些岁月渐渐远去，怪兽和石头在练团时可能再也看不到我沾满海报油性笔的指尖弹吉他的样子。九号球的规则有时可以指向人生，无论绕了多少路，只要最后九号进袋，就依然有机会逆转人生。</p>
+            <br>
+            <br>
+            <br>
+            <p>怪兽 - 九号球
+            <p style="color: rgb(73,113,165); line-height: 1em;">http://y.qq.com/#type=song&mid=000L1lHB15HS02&play=0</p>
+            <br>
+            <p>石头 - 真实故事改编
+            <p style="color: rgb(73,113,165); line-height: 1em;">http://y.qq.com/y/static/album/Z/B/000kXpXB3d3jZB.html</p>
+            <br>
+            
+        </div>
+       
+        <div class="section-label">歌曲信息</div>
+            <div class="text-content2">
+                <p>
+                    <span style="font-size: 1.5em; font-weight: bold;">九號球  </span>
+                    <span>（詞:阿信&nbsp;&nbsp;&nbsp;曲:怪獸）</span>
+                </p>
+                <br>
+                <p>逃走 翻過圍牆 我只能逃走<br>
+                    從教室裡頭奔向自由 熟悉角落<br>
+                    有人在等我 有挑釁的笑容</p>
+                    <br>    
+                    <p>今天誰先開球 讓誰嘗點苦頭<br>
+                    綠色地平線上 我撞著彩色墮落</p>
+                    <br>   
+                    <p>也許我這一杆 又沒辦法進球<br>
+                    就像我的生活 一直在出差錯</p>
+                    <br> 
+                    <p>也許我這一生<br>
+                    始終在追逐那顆九號球<br>
+                    卻忘了 是誰在愛我<br>
+                    卻忘了 是誰在罩著我</p>
+                    <br>
+                    <p>從前書包很滿<br>
+                    裝不下的夢 就丟了一些<br>
+                    未來我們 要怎麼活<br>
+                    凝視著白球 暫時我不去想</p>
+                    <br> 
+                    <p>天空漸漸變紅 影子爬滿球桌<br>
+                    輸贏沒有結果 像人生難以捉摸</p>
+                    <br>  
+                    <p>也許我這一杆 又沒辦法進球<br>
+                        就像我的生活 一直在出差錯</p>
+                        <br>
+                        <p>也許我這一生<br>
+                        始終在追逐那顆九號球<br>
+                        卻忘了 是誰在愛我<br>
+                        <p style="text-indent: -11px;">（卻忘了 是誰在罩著我）</p>
+                <br>
+                <p style="text-indent: 0em; padding-bottom: 0em;">九號球mv</p>
+                <div class="video-container2">
+                    <video controls>
+                        <source src="9_ball_1.mp4" type="video/quicktime">
+                        您的浏览器不支持 video 标签。
+                    </video>
+                </div>
+                <br>
+                <p style="text-indent: 0em; padding-bottom: 0em;">幕後特輯</p>
+                <div class="video-container2">
+                    <video controls>
+                        <source src="9_ball_mv_2.mp4" type="video/quicktime">
+                        您的浏览器不支持 video 标签。
+                    </video>
+                </div>
+                   </div>
+  
+        <div class="section-label">微博互動</div>
+        <div class="text-content">
+            <h3 style="text-indent: 0em;">怪獸與《愛上九號球》</h3>
+            <img src="9_ball_2_1.jpg" alt="图片">
+            <br>
+            <img src="9_ball_2_2.jpg" alt="图片">
+            <h3 style="text-indent: 0em;">怪獸與《逆轉勝》</h3>
+            <img src="9_ball_3.jpg" alt="图片">
+            <br>
+            <div class="video-container">
+                <video controls>
+                    <source src="9_ball.mp4" type="video/quicktime">
+                    您的浏览器不支持 video 标签。
+                </video>
+            </div>
+            <img src="9_ball_4_1.jpg" alt="图片">
+            <img src="9_ball_4_2.HEIC" style="width: 75%;"  alt="图片">
+            <br>
+            <img src="9_ball_5.jpg" alt="图片">
+            <br>
+            <img src="9_ball_6_1.jpg" alt="图片">
+            <img src="9_ball_6_2.HEIC" style="width: 75%;" alt="图片">
+            <img src="9_ball_6_3.HEIC"  style="width: 70%;" alt="图片">
+            <br>
+            <img src="9_ball_7.jpg" alt="图片">
+            <br>
+            <img src="9_ball_8.jpg" alt="图片">
+            <br>
+            <img src="9_ball_9_1.jpg" alt="图片">
+            <img src="9_ball_9_2.HEIC" style="width: 75%;" alt="图片">
+            <br>
+            <img src="9_ball_10.jpg" alt="图片">
+            <br>
+            <img src="9_ball_11.jpg" alt="图片">
+            <br>
+            <img src="9_ball_12.jpg" alt="图片">
+            <br>           
+            <p style="text-align: center; color: #7d7d7d;">--未完待續--</p>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('myAudio');
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        function restartAudio() {
+            audio.currentTime = 0;
+            audio.play();
+            function playAudioOnFirstInteraction() {
+            audio.play().catch(error => {
+                console.log('Audio playback was prevented:', error);
+            });
+            // 移除事件监听器，以避免重复触发
+            document.removeEventListener('click', playAudioOnFirstInteraction);
+            document.removeEventListener('touchstart', playAudioOnFirstInteraction);
+        }
+
+        // 添加事件监听器，检测用户的第一次交互
+        document.addEventListener('click', playAudioOnFirstInteraction);
+        document.addEventListener('touchstart', playAudioOnFirstInteraction);
+        }
+    </script>
+</body>
+</html>
