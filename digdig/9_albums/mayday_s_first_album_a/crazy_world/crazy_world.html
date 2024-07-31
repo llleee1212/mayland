@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五月天第一張創作專輯-瘋狂世界</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            
+        }
+        header {
+            position: relative;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        header img {
+            width: 100%;
+            height: auto;
+            
+        }
+        header .logo {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5%; /* 设置图片宽度，可根据需要调整 */
+            z-index: 1;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1)) invert(100%);
+        }   
+        .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-bottom: 20px;
+            margin-left: 15px; /* 左边距 */
+            margin-right: 15px; /* 右边距 */
+            border: 2px solid #67cced;
+        }
+
+        .back {
+            padding-left: 0;
+            margin-left: 15px; /* 左边距 */
+            margin-right: 15px; /* 右边距 */
+            text-decoration: none;
+        }
+        .content img {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .text-content {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .text-content2 {
+            margin: 20px 0;
+            font-size: 18px;
+           
+        }
+        .text-content p {
+            margin: 10px 0;
+        }
+        .text-content2 p {
+            margin: 5px 0;
+        }
+        
+        .text-content .highlight {
+            color: #557140; /* 橙色 */
+            text-align: center;
+            line-height: 1;
+            font-size: 16px;
+        }
+        .text-content .note {
+            font-style: italic;
+            color: #555; /* 灰色 */
+        }
+        .text-content2 .note {
+            font-style: italic;
+            color: #555; /* 灰色 */
+        }
+        .text-content .note2 {
+            color: #da7d7d; /* 灰色 */
+        }
+        
+        .container p {
+            font-size: 1.5em;
+        
+        }
+        .audio-link {
+            margin: 1em 0;
+        }
+        .center {
+            text-align: center;
+        }
+        .center img {
+            width: 500px; /* 设置图片宽度为父元素宽度的50%，可以根据需要调整 */
+            display: block; /* 让图片居中显示 */
+            margin: 0 auto; /* 使用 margin 属性自动居中 */
+        
+        }
+        .audio-controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .section-label {
+            display: block;
+            text-align: center;
+            background-color: #67cced; /* 淡藍色 */
+            color: white;
+            font-size: 20px; /* 比正文字體大 */
+            padding:10px 0;
+            margin: 20px 0;
+            margin-right: -32px;
+            margin-left: -32px;
+            font-weight: bold;
+        }
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+            margin-top: -5px;
+            width: 80%; /* 或设置一个固定宽度 */
+            max-width: 800px; /* 最大宽度，防止过宽 */
+        }
+        video {
+            width: 100%; /* 播放器宽度占满容器 */
+            height: auto; /* 高度自适应 */
+        }
+        
+        a {
+            color: inherit; /* 使用父元素的字體顏色 */
+            text-decoration: none;
+        }
+        @media (min-width: 600px) {
+            .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-bottom: 40px;
+            margin-left: 55px; /* 左边距 */
+            margin-right: 55px; /* 右边距 */
+            border: 2px solid #67cced;
+            }
+            .content img {
+                width: 50%;
+            }
+            .back {
+            margin-left: 55px; /* 左边距 */
+            margin-right: 25px; /* 右边距 */
+            }
+            .section-label {
+            margin-right: -32px;
+            margin-left: -32px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../../../../main_header2.JPG" alt="背景图片">
+        <a href="../../../../index.html">
+            <img src="../../../../logo.png" alt="网站Logo" class="logo">
+        </a>
+    </header>
+    <div class="back">
+        <p><a href="../../../../index.html">首頁 &gt; <a href="../../../category1.html">考古館 &gt; <a href="../mayday_s_first_album_a.html">五月天第一張創作專輯 &gt; </a>瘋狂世界</p>
+    </div>
+    <div class="content">
+        <p style="text-align: center; color: #8f8f8f;">回家吧 那就從這首歌開始 慢慢唱🎤</p>
+        <div class="audio-controls"> 
+            <p>BGM:瘋狂世界 [ver. 十萬青年站出來 彰化站Live] <a href="crazy_world.MP3" download="crazy_world.mp3"></a></p>
+            <audio id="myAudio" src="crazy_world.MP3" controls autoplay></audio><br>
+            <button onclick="toggleAudio()">播放/暫停</button>
+            <button onclick="restartAudio()">重新播放</button>
+        </div>
+    
+        <div class="section-label">阿信的微博</div>
+        <div class="audio-link">
+            <h2>[ Tomorrow Never Knows ] </h2>
+            <h3><a style="text-decoration: underline;" href="https://weibo.com/1265020392/4336035816861006">阿信 19-02-04 18:09</a> </h3>
+        </div>
+        <div class="text-content">
+            <br>
+        <p>那年<br>
+        我們還未組成五月天<br><br>
+        
+        我參加高中校內的天韻獎<br>
+        以一首創作曲彈唱 拿下第二名<br><br>
+        
+        評審老師是一位名製作人<br>
+        邀請我到他的錄音室<br>
+        從來沒有看過錄音室的我 大開眼界<br><br>
+        
+        他說 我的吉他編的不錯 ( 你沒看錯哈哈 > v < )<br>
+        他勉勵我 可以花更多的心思玩音樂<br>
+        更鼓勵我 找同學一起用力玩樂團<br><br>
+        
+        那是 1990 年代<br>
+        他說 雖然華語世界 樂團能登上主流不多<br>
+        但他相信 主流音樂會慢慢改變<br><br>
+        
+        接著他用錄音室等級的巨型喇叭<br>
+        播放了一首名為 Tomorrow Never Knows 的歌<br>
+        他說 這個樂團橫掃了當時日語的音樂圈<br><br>
+        
+        我想 <br>
+        我永遠忘不了當時 第一次聽見這首歌的感動<br><br>
+        
+        /<br><br>
+        
+        但之後<br>
+        沒多久我就完全忘記這件事了<br>
+        學業 音樂 同學 朋友<br>
+        無數青春裡的事件迎面而來<br><br>
+        
+        升學壓力與音樂夢想 激烈的拔河著<br>
+        我們穿梭在南陽街和樂器行<br><br>
+        
+        後來的故事 你們也許略知<br>
+        我們組了一個鳥團 取名叫五月天<br>
+        寫歌 演出 組織音樂祭<br><br>
+        
+        20 幾年後<br>
+        我們很幸運的存活了下來<br>
+        而且在這段漫漫歲月中<br>
+        還能夠不停的寫歌 錄音 演出<br>
+        也組織了自己的唱片公司<br><br>
+        
+        /<br><br>
+        
+        忘了是哪次開會<br>
+        艾姐勇志說 這個大家盼望20年的超級樂團<br>
+        首肯應邀來到台北 做首次的海外演出<br>
+        我的感覺跟所有孩子迷一樣<br>
+        極度不真實<br><br>
+        
+        一直到在小巨蛋裡聽見這首歌<br>
+        Tomorrow Never Knows<br>
+        回憶突然嘩一聲 好像潰堤一般<br>
+        整個解壓縮 無限展開<br><br>
+        
+        那個初次見識錄音室的 張大眼睛的少年<br>
+        竟然真的玩著音樂 <br>
+        不知不覺地走過了一半人生<br><br>
+        
+        這是一段<br>
+        我從來沒有想像過的歷程<br><br>
+        
+        Tomorrow Never Knows .<br><br>
+        
+        /<br><br>
+        
+        所有的現實<br>
+        如果退回 20 幾年前那個少年的視角<br>
+        都是魔幻寫實<br><br>
+        
+        如果不是在這個時代<br>
+        如果不是因為這個時代的你們<br>
+        這趟旅程不會這樣<br><br>
+        
+        願每個人的明天 都能往精彩離奇的未知開展<br><br>
+        
+        Tomorrow Never Knows<br>
+        新年快樂<br><br>
+        
+        -<br>
+        <p style="color: rgb(73,113,165); ">#五月天陪你守岁# <br>
+        #今晚五月天陪你守歲##未來也想年年陪你守歲岁#</p>
+            <br>
+        <img src="crazy_world_1.JPG" alt="图片">
+        
+            
+            <p class="note2" style="text-indent: 0em;"></p>
+        </div>
+        <div class="section-label">怪獸的微博</div>
+        
+        <div class="text-content2">
+            <p  style="text-indent: -6px;"><span> 《2019瘋狂世界》</span>
+                <span style="color: rgb(73,113,165);"> #MaydayBlue20th#</span><br><br>
+
+                在這個MV裡<br>
+                看見我穿著西裝擔任一位律師助理的模樣<br>
+                我自己其實沒有幻想過這個畫面<br>
+                可能我爸爸有<br><br>
+                
+                就如同我也沒有幻想過自己20年後<br>
+                仍為這個世界演奏著一首首歌曲<br>
+                依然站在舞台上的模樣<br><br>
+                
+                當初的我<br>
+                只是朝著一個篤定的方向往前<br>
+                只是奮力踩下每一步<br>
+                只是壓緊每個和弦<br><br>
+                
+                可世界上每一個通往夢的天梯<br>
+                都建構在看似平凡卻瘋狂的每一瞬間<br><br>
+                
+                穿過無畏的青春歲月<br>
+                來到二十年後的今天<br><br>
+                
+                如果以一場綁架來比喻<br>
+                我很感激故事是這樣的發展<br>
+                無論是什麼處境<br>
+                無論是何種風景<br>
+                身旁一直有我有你<br>
+                我還是那樣彈著<br>
+                你還是那樣笑著<br>
+                用力燃燒<br>
+                瘋狂活著</p>
+                <br>
+            <div style="clear: both;"></div>
+            <p style="text-indent: 0em; padding-bottom: 0em;"> 瘋狂世界[ver.maydayblue20th]mv </p>
+            <div class="video-container">
+                <video controls>
+                    <source src="crazy_world_2.mp4" type="video/quicktime">
+                    您的浏览器不支持 video 标签。
+                </video>
+            </div>
+        </div>
+        <div class="section-label">歌曲信息</div>
+            <div class="text-content2">
+                <p>
+                    <span style="font-size: 1.5em; font-weight: bold;">瘋狂世界 </span>
+                    <span>（詞曲:阿信）</span>
+                </p>
+                <br>
+                <p>如果說了後悔 是不是一切就能倒退<br>
+                    回憶多麼美 活著多麼狼狽<br><br>
+                    
+                    為什麼這個世界 總要叫人嚐傷悲<br>
+                    我不能了解 也不想了解<br><br>
+                    
+                    我好想 好想飛<br>
+                    逃離這個瘋狂世界<br>
+                    那麼多苦 那麼多累<br>
+                    那麼多莫名的淚水<br><br>
+                    
+                    我好想 好想飛<br>
+                    逃離這個瘋狂的世界<br>
+                    如果是你發現了我<br>
+                    也別將我挽回<br><br>
+                    
+                    想了你一整夜 再也想不起你的臉<br>
+                    你是一種感覺 寫在夏夜晚風裡面<br><br>
+                    
+                    青春是挽不回的水 轉眼消失在指間<br>
+                    用力地浪費 再用力地後悔<br><br>
+                    
+                    我好想 好想飛<br>
+                    逃離這個瘋狂世界<br>
+                    那麼多苦 那麼多累<br>
+                    那麼多莫名的淚水（傷悲）<br><br>
+                    
+                    我好想 好想飛<br>
+                    逃離這個瘋狂的世界<br>
+                    如果是你發現了我<br>
+                    也別將我挽回
+                <p class="note"></p>
+                <br>
+                <p style="text-indent: 0em; padding-bottom: 0em;"> 瘋狂世界mv </p>
+            <div class="video-container">
+                <video controls>
+                    <source src="crazy_world.mp4" type="video/quicktime">
+                    您的浏览器不支持 video 标签。
+                </video>
+            </div>
+                <p class="note" style="font-size: 14px; text-indent: 0em; "></p>
+            </div>
+  
+        <div class="section-label">微博互動</div>
+        <div class="text-content">
+            <h3 style="text-indent: 0em;">我好想好想飛</h3>
+            <img src="crazy_world_2.jpg" alt="图片">
+            
+            <p class="note" style="font-size: 14px; text-indent: 0em; text-align: center;"></p>
+            
+            <br>
+            <p style="text-align: center; color: #7d7d7d;">--未完待續--</p>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('myAudio');
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        function restartAudio() {
+            audio.currentTime = 0;
+            audio.play();
+            function playAudioOnFirstInteraction() {
+            audio.play().catch(error => {
+                console.log('Audio playback was prevented:', error);
+            });
+            // 移除事件监听器，以避免重复触发
+            document.removeEventListener('click', playAudioOnFirstInteraction);
+            document.removeEventListener('touchstart', playAudioOnFirstInteraction);
+        }
+
+        // 添加事件监听器，检测用户的第一次交互
+        document.addEventListener('click', playAudioOnFirstInteraction);
+        document.addEventListener('touchstart', playAudioOnFirstInteraction);
+        }
+    </script>
+</body>
+</html>

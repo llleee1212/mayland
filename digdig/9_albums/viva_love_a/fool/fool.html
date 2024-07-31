@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>愛情萬歲-憨人</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            
+        }
+        header {
+            position: relative;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        header img {
+            width: 100%;
+            height: auto;
+            
+        }
+        header .logo {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5%; /* 设置图片宽度，可根据需要调整 */
+            z-index: 1;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1)) invert(100%);
+        }   
+        .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-bottom: 20px;
+            margin-left: 15px; /* 左边距 */
+            margin-right: 15px; /* 右边距 */
+            border: 2px solid #67cced;
+        }
+
+        .back {
+            padding-left: 0;
+            margin-left: 15px; /* 左边距 */
+            margin-right: 15px; /* 右边距 */
+            text-decoration: none;
+        }
+        .content img {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .text-content {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .text-content2 {
+            margin: 20px 0;
+            font-size: 18px;
+           
+        }
+        .text-content p {
+            margin: 10px 0;
+            text-indent: 2em; /* 首行縮進 */
+        }
+        .text-content2 p {
+            margin: 5px 0;
+        }
+        
+        .text-content .highlight {
+            color: #557140; /* 橙色 */
+            text-align: center;
+            line-height: 1;
+            font-size: 16px;
+        }
+        .text-content .note {
+            font-style: italic;
+            color: #555; /* 灰色 */
+        }
+        .text-content2 .note {
+            font-style: italic;
+            color: #555; /* 灰色 */
+        }
+        .text-content .note2 {
+            color: #da7d7d; /* 灰色 */
+        }
+        
+        .container p {
+            font-size: 1.5em;
+        
+        }
+        .audio-link {
+            margin: 1em 0;
+        }
+        .center {
+            text-align: center;
+        }
+        .center img {
+            width: 500px; /* 设置图片宽度为父元素宽度的50%，可以根据需要调整 */
+            display: block; /* 让图片居中显示 */
+            margin: 0 auto; /* 使用 margin 属性自动居中 */
+        
+        }
+        .audio-controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .section-label {
+            display: block;
+            text-align: center;
+            background-color: #67cced; /* 淡藍色 */
+            color: white;
+            font-size: 20px; /* 比正文字體大 */
+            padding:10px 0;
+            margin: 20px 0;
+            margin-right: -32px;
+            margin-left: -32px;
+            font-weight: bold;
+        }
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+            margin-top: -5px;
+            width: 80%; /* 或设置一个固定宽度 */
+            max-width: 800px; /* 最大宽度，防止过宽 */
+        }
+        video {
+            width: 100%; /* 播放器宽度占满容器 */
+            height: auto; /* 高度自适应 */
+        }
+        
+        a {
+            color: inherit; /* 使用父元素的字體顏色 */
+            text-decoration: none;
+        }
+        @media (min-width: 600px) {
+            .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-bottom: 40px;
+            margin-left: 55px; /* 左边距 */
+            margin-right: 55px; /* 右边距 */
+            border: 2px solid #67cced;
+            }
+            .content img {
+                width: 50%;
+            }
+            .back {
+            margin-left: 55px; /* 左边距 */
+            margin-right: 25px; /* 右边距 */
+            }
+            .section-label {
+            margin-right: -32px;
+            margin-left: -32px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../../../../main_header2.JPG" alt="背景图片">
+        <a href="../../../../index.html">
+            <img src="../../../../logo.png" alt="网站Logo" class="logo">
+        </a>
+    </header>
+    <div class="back">
+        <p><a href="../../../../index.html">首頁 &gt; <a href="../../../category1.html">考古館 &gt; <a href="../viva_love_a.html">愛情萬歲 &gt; </a>憨人🖐🏻</p>
+    </div>
+    <div class="content">
+        
+        <div class="audio-controls"> 
+            <p>BGM:憨人 [ver.十萬人出頭天Live（feat.附中吉他社）] <a href="fool.MP3" download="fool.mp3"></a></p>
+            <audio id="myAudio" src="fool.MP3" controls autoplay></audio><br>
+            <button onclick="toggleAudio()">播放/暫停</button>
+            <button onclick="restartAudio()">重新播放</button>
+        </div>
+    
+
+        <div class="section-label">🖐🏻 阿信的博客 🖐🏻</div>
+        <div class="audio-link">
+            <h2>給我一個支點，一把吉他，我將舉起地球。</h2>
+            <h3><a style="text-decoration: underline;" href="https://blog.sina.com.cn/s/blog_4b66ade80102e6dv.html">阿信 2012-03-29* 22:46:58</a></h3>
+        </div>
+        <img src="fool_1.jpeg" style="display: block; float: left;" alt="图片">
+        <div style="clear: both;"></div>
+        <div class="text-content2">
+        <br>
+        <p>或是說：給我一個支點，一把吉他，我將舉起他 X 的地球。</p>
+        <br>
+        玩音樂，因為玩音樂快樂，因為玩音樂的生活讓我有存在感，有雙腳踏在地上的感覺，直到聽音樂入了神，才能腳尖一踮，輕輕飄飄的浮進太空。<br>
+        <br>
+        在太空中回頭，你會看到一顆藍得令人心疼的大彈珠，那是我所有成長回憶的地方。我看著上面的島嶼山巒，密佈著蛛網小徑，發現了我遺忘已久的足跡和回憶。</p>
+        <br>
+        <p>是的，還記得我、怪獸、瑪莎、石頭，經常擠進一台小車，殺上仰德大道，再拐進一路顛簸曲折的羊腸小徑，抵達冷水坑的公有的公共溫泉澡堂，幾個人褲子衣服一拉一扯，隨便抄起一個水瓢沖個兩三下，就往那池清澈的鐵泉裡泡著，那皮膚與冷空氣及溫泉水接觸時是怎麼樣的感覺，大致上已經忘的一乾二淨。我們赤紅著身體揮汗討論著編曲的細節，無數的音樂共識在這裡坦承相見的成形，話題被波光拆成一片一片，水氣煙霧泛著微弱的日光燈在木頭的小屋裡一片朦朧，就像回憶一樣飄邈。</p>
+        <br>  
+        <p>但是我始終印象清晰著的，是塞滿小車還不時逸出黑暗的山區的音樂聲，和興致高昂的討論聲，我們在車上聽著啟蒙時代的羅大佑，唱和著伍佰的俐落嗓音，Oasis不可一世讓大家過足迷弟的癮，U2總是讓我們起雞皮疙瘩，還有永遠在披頭四歌聲中沉默的我們。</p>
+        <br>    
+        <p>練團室，怪獸從台大後門用走的就會到，沒想到我早就翹課恭候多時，我們一起到樓下買麵包順便等從輔大下課的瑪莎，遇到千里迢迢從淡大殺過來正在停機車的石頭。這是我們最期待的時刻，電吉他從盒子裡的沉睡醒過來，音箱正在暖機呢。讓我確定一下，我們生活中的最重要的事，從那時起就一直是音樂了。</p>
+        <br>    
+        <p>除了搞五月天之外，因為興趣和莫名的熱情使然，我也參與了「北區大專搖滾聯盟」，這個由許多大專院校玩團的人組成的。從一開始的打文件檔案，慢慢的有了越來越多的參與。電話又來了，星期三下午要到阿帕討論事情。到了阿帕鼓練團室，盟主 Omega 和執行秘書大魔頭映萱都已經坐在沙發上多時了，要討論的是一個新的大型演唱會，當時墾丁的春天吶喊，由幾個定居台中的外國人辦的很成功，大家覺得在台北也要有一個這樣的演出機會。而且，如果由台灣的學生們，玩樂團成員們自發性的完成，那不是更有意義嗎！</p>
+        <br>    
+        <p>因此，大家醞釀產生出了這個想法。只要是報了名的樂團，就擁有自己的一個表演時段，大概是 30~40 分鐘吧，聯盟提供舞台，樂團只管盡情的演出就是了！棒透了！那名字呢? 這是生在台灣的樂團自己發起的大型演出；我們要讓不曾接觸樂團的人知道，世界上有這樣一群年輕人，在唱自己的歌。</p>
+        <br>    
+        <p>負責美術的我，找來了幾個唸美術的同學，將野台戲的紋飾轉化，保留了傳統戲班那些充滿生命力的螢光色系，把數十公尺寬的舞台變成了一個超大野台。還由朋友家中的印刷廠贊助，我們以很低的價格印了一千張海報，我一個人騎著機車去搬，重得我差點摔車。搬回來了，那誰可以去貼呢? 很抱歉，聯盟人手不足。於是白天我載著盟主去各個大專院校，將海報交給社團負責人張貼；然後我跟映萱繼續在半夜偷偷的將海報貼在整個台北市，公館地下道，士林夜市的巷子裡……。</p>
+        <br>    
+        <p>我們不怕累，因為我們知道，這些海報將在太陽出來以後，出現在眾人的眼前，驕傲的宣告著一個新音樂世代的來臨。</p>
+        <br>    
+        <p>1996 年，第一屆的野台開唱誕生了，美術館前數千個人聚集著，他們有些是樂團原本的支持群，大部分則是第一次欣賞到這樣新鮮的音樂。世界的僵硬有一點鬆動了！第二年的年初，我們又重新聚首，更忙更累的拉廣告找贊助聯絡樂團，這一次在大安公園音樂台，找到了 MTV 台和民視全程錄影轉撥，希望讓更多的人看到聽到。報名參與的樂團更多了，活動從一天延長成兩天，音響器材公司願意加日不加價的幫忙，有一個問題是：要整夜有人看顧著器材。誰來做這件事呢? 很抱歉，聯盟人手不足……。</p>
+        <br>   
+        <p>於是我有了那一段熱血歲月裡，最深刻的回憶。</p>
+        <br>    
+        <p>還不到五月，應該穿厚一點的外套的。無人的音樂台前，好安靜，只有幾盞公園燈照著，把寂寞的感覺擴大了。一個人，我一個人坐在長椅上，早已放棄趕走數以百計輪流攻擊我的蚊子。不敢睡，怕隨時都可能有人來幹器材，到時候聯盟賠不完兜著走。</p>
+        <br>    
+        <p>1997年的野台開唱的當夜，我的眼睛直愣愣的盯著幾個小時前熱鬧非凡，而此刻空無一人的舞台，那一夜，想了好多，自己的未來，樂團的未來。遙遠遙遠的以後，會不會有人記得我？在這個寂寞的星球，曾這樣的活過？那年的野台開唱，是五月天的天字第一場演出。</p>
+        <br>    
+        <p>五月天的故事，隨後將變成一條支流，匯入了華人樂團史。</p>
+        <br>    
+        <p>在2000年的金曲獎上，我們和拖拉庫、四分衛一起入圍最佳團體。亂彈拿了這個獎，主唱阿翔一隻手抄起獎盃舉過了頭舉上了天，豪氣干雲勝過任何一個得獎者，一句「樂團的時代來臨了！」。我們站在他的背後，激動的快要掉下淚來，覺得我們這些搞團的，一個一個都拿了獎，立了功。</p>
+        <br>
+        隔年，金曲獎旋即增加了最佳樂團獎， 當下被我們又感激又慚愧的報回家了。2002年的最佳樂團我們就又落敗了，摘冠的是默默耕耘十年，投入社會議題甚深的交工樂隊，電視機前的我們和電視上的老字號樂團刺客和四分衛一起拍手祝賀，感同身受。 1976、13、tizzy bac、旺福、宇宙人、八三夭、魔幻力量、...，越來越多的樂團以獨立的方式，或與唱片公司合作，發表自己的唱片。我和怪獸之前也在滾石唱片，努力的創造後援給一些有想法的創作人，一步一步，將會有更多的玩音樂的年輕人被聽見，而他們，將慢慢改變這個世界。</p>
+        <br>   
+            這群愛音樂玩音樂的人們，寫下了歷史，改變著世界。</p>
+            <br>   
+            而五月天這個小小支流，沒有停下腳步，依然在悠悠歲月中，不住地奔竄。13年內推出了八張專輯作品，六次巡迴演唱。距離那個初次演出的夜晚，整整15年了，我剛從倫敦飛到香港，輾轉到了深圳，準備後天的「諾亞方舟」新巡演，這預計一路唱過整個亞州，甚至要霸佔鳥巢兩個夜晚。</p>
+            <br> 
+            2014年五月天再瘋狂地唱過東京、首爾、倫敦、巴黎、阿姆斯特丹、溫哥華、多倫多、紐約、芝加哥、休士頓、聖荷西、洛杉磯......。</p>
+            <br>
+            而一個人生能有幾個15年呢？這一個15年，對我來說，很精采。</p>
+            <br>  
+            前面說過的：給我一個支點，一把吉他，我將舉起地球。地球很重，他X的重，不過我始終相信阿基米德說的。如果你手上有一把吉他的話，我想，給你一個支點，你就可以舉起這個地球。</p>
+            <br>   
+            最後，我要說，你們就是最穩固的偉大支點。</p>
+            <br> 
+            <br>
+            生日快樂，乾杯！</p>
+            <br>
+            <br>
+            
+            <p class="note" style="font-size: 18px; text-indent: 0em; font-style: normal; color: darkgrey;">原文摘自「下課後 怪獸家點名」樂譜書序<br>第一次增補於2012.3.29<br>
+                <span>阿信臉書專頁  </span>
+                <span style="color: rgb(73,113,165);">http://www.facebook.com/ashin555</span><br>
+                <span>阿信新浪微博 </span>
+                <span style="color: rgb(73,113,165);">http://weibo.com/musiq</span>
+            </p>
+            <br>
+            <p class="note" style="font-size: 14px; text-indent: 0em; ">*0329成軍日十五週年</p>
+
+            <div class="section-label">🖐🏻 阿信的微博 🖐🏻</div>
+            <div class="audio-link">
+                <h2>竪井</h2>
+                <h3><a style="text-decoration: underline;" href="https://weibo.com/1265020392/5017050868615896">阿信 24-03-29* 00:00</a></h3>
+            </div>
+            <br>
+            一開始，你只是公園裡挖砂的孩子。<br><br>
+
+            而且，你只是路過公園，<br>
+            看到另一群大一點的孩子們，圍著沙坑。<br><br>
+            
+            於是你好奇的走進公園，走近沙坑。<br><br>
+            
+            你伸出雙手，<br>
+            跟著挖著這座破公園裡的破沙坑。<br><br>
+            
+            <p style="text-indent: -10px;">「底下有寶藏嗎？」<br><br>
+            
+            不，這根本不是個需要問的問題。<br><br>
+            
+            因為挖砂，本身就夠好玩了。<br><br>
+            
+            天色暗了，<br>
+            有些孩子們回家了，<br>
+            你跟另外幾個孩子繼續挖著沙坑，<br>
+            有些是忘了回家。<br><br>
+            
+            而你，是根本不想回家。<br><br>
+            
+            /<br><br>
+            
+            光陰如果是一首詩，<br>
+            那麼這首詩必定有腳，<br>
+            確保在你不經意時，<br>
+            狠狠踹你一腳。<br><br>
+            
+            詩篇來到這裡，<br>
+            你已看不見孩子與公園。<br><br>
+            
+            巨大的探照燈懸在半空中往下探，<br>
+            勉強讓光線照映到井底。<br><br>
+            
+            井旁隆隆作響圍滿了大型機具，<br>
+            懸吊的、開鑿的、夯土的各種機具，<br>
+            以及只有吼著才能讓彼此聽見的操作員。<br>
+            更多的人車，川流進出此地，<br>
+            工事圍籬重重的包圍著這龐大的基地。<br><br>
+            
+            這裡，<br>
+            是當初的那座破公園。<br><br>
+            
+            你已經在這不知多深的井底，<br>
+            將近1/4個世紀，<br>
+            蒸騰的地熱、噴濺的污泥、<br>
+            偶爾碎石殞落擦傷臉頰，<br>
+            那都難免。<br><br>
+            
+            /<br><br>
+            
+            往頭上看去，<br>
+            天空只是一個指甲蓋大小的洞，<br>
+            但，重點不是天空。<br><br>
+            
+            更多疲倦、奔波、忙碌的夥伴，<br>
+            從天空的指甲蓋的正中央一躍而下，<br>
+            垂降至這窄小竪井中，<br>
+            為你補給，<br>
+            陪你拼命。<br><br>
+            
+            支持你的人，<br>
+            甚至在井外為你吶喊打氣，<br>
+            碎石依然偶爾砸落井底，<br>
+            但總是旁人為你掛彩。<br><br>
+            
+            那個挖砂挖到不想回家的孩子，<br>
+            才突然發現這竪井與周遭人事物，<br>
+            早已是你的家。<br><br>
+            
+            /<br><br>
+            
+            <p style="text-indent: -10px;">「底下有寶藏嗎？」<br><br>
+            
+            竪井之上，耳語四起，<br>
+            沿著井壁反彈至井底，問題似雷聲轟鳴。<br><br>
+            
+            但，這根本不用問。<br><br>
+            
+            挖砂本身就夠好玩了。<br><br>
+            
+            只要你記得，<br>
+            一開始，<br>
+            你就是公園裡那個挖砂的孩子。<br><br>
+            
+            /<br><br>
+            
+            所有長不大的<br>
+            還沒長大的<br>
+            與不得不長大的孩子們<br><br>
+            
+            第25+2個生日快樂<br><br>
+            
+            我們約在第25年見。<br><br>
+            
+            -<br>
+            <span style="color: rgb(73,113,165);">#五月天成团25周年#  </span>
+            <span>.</span><br>
+            <span style="color: rgb(73,113,165);">#我和五月天的25周年#  </span>
+            <span>.</span><br>
+                    <br>
+            <p class="note" style="font-size: 14px; text-indent: 0em; ">*成團二十五週年</p>
+
+        
+            
+        <div class="section-label">🖐🏻 歌曲信息 🖐🏻</div>
+            <div class="text-content2">
+                <p>
+                    <span style="font-size: 1.5em; font-weight: bold;">憨人*  </span>
+                    <span>（詞曲:阿信）</span>
+                </p>
+                <br>
+                <p>我的心內 感覺人生的沉重 不敢來振動<br>
+                    我毋是好囝 嘛毋是歹人 我只是愛眠夢<br>
+                    我毋願隨湧隨風 飄浪西東 親像船無港<br>
+                    我毋願做人 奸巧軁縫 甘願來作戅人</p>
+                    <br>
+                    <p>我毋是頭腦空空 我毋是一只米蟲<br>
+                    人啊人 一世人 要按怎歡喜 過春夏秋冬</p>
+                    <br>
+                    <p>我有我的路 有我的夢<br>
+                    夢中的彼個世界 敢講伊是一場空<br>
+                    我行過的路只有希望<br>
+                    希望你我講過的話 放在心肝內 總有一天</p>
+                    <br>
+                    <p>看到滿天全金條 要捎無半項 環境來戲弄<br>
+                    背景無夠強 天才無夠弄 遂項是攏輸人<br>
+                    只好看破這虛華 毋驚路歹行 毋驚大雨淋<br>
+                    心上一字敢 面對我的夢 甘願來作戅人</p>
+                    <br>
+                    <p>我毋是頭腦空空 我毋是一只米蟲<br>
+                    人啊人 一世人 要按怎歡喜 過春夏秋冬</p>
+                    <br>
+                    <p>我有我的路 有我的夢<br>
+                    夢中的彼個世界 敢講伊是一場空<br>
+                    我行過的路只有希望<br>
+                    希望你我講過的話 放在心肝內 總有一天</p>
+                    <br>
+                    <p>我有我的路 有我的夢<br>
+                    夢中的彼個世界 敢講伊是一場空<br>
+                    我行過的路只有希望<br>
+                    希望你我講過的話 放在心肝內 總有一天<br>
+                    我知影總會有一天</p>
+                    <br>
+                    <p>Yeah, yeah, yeah, yeah<br>
+                    La-la-la, la<br>
+                    La-la-la, la<br>
+                    La-la-la, la<br>
+                    La-la-la, la<br>
+                    我有我的路 我有我的夢<br>
+                    La-la-la, la<br>
+                    總會有一天 總會有一天<br>
+                    La-la-la, la</p>
+                    <br>
+                    <p style="text-indent: 0em; padding-bottom: 0em;"> 憨人mv </p>
+                    <div class="video-container">
+                        <video controls>
+                            <source src="fool.mp4" type="video/quicktime">
+                            您的浏览器不支持 video 标签。
+                        </video>
+                    </div>
+                <br>
+                <p class="note" style="font-size: 14px; text-indent: 0em; ">*本站唯一主題曲🚩</p>
+            </div>
+  
+        <div class="section-label">🖐🏻 微博互動 🖐🏻</div>
+        <div class="text-content">
+            <h3 style="text-indent: 0em; text-align: center;">“憨人”從這裡誕生</h3>
+            <img src="fool_1.jpg" alt="图片">
+            <h3 style="text-indent: 0em; text-align: center;">我們都是憨人</h3>
+            <img src="fool_2.jpg" alt="图片">
+            <img src="fool_2_1.jpg" alt="图片">
+            <img src="fool_2_2.jpg" alt="图片">
+            <h3 style="text-indent: 0em; text-align: center;">心上一個敢</h3>
+            <img src="fool_3_1.jpg" alt="图片">
+            <img src="fool_3_2.jpg" alt="图片">
+            <h3 style="text-indent: 0em; text-align: center;">走過無限歲月</h3>
+            <img src="fool_4.jpg" alt="图片">
+            <img src="fool_4_1.jpg" alt="图片">
+            <img src="fool_4_1_1.jpg" alt="图片">
+            <img src="fool_4_2.jpg" alt="图片">
+            <img src="fool_4_3.jpg" alt="图片">
+            <img src="fool_4_4.jpg" alt="图片">
+            <img src="fool_4_4_1.jpg" alt="图片">
+            <p class="note" style="font-size: 14px; text-indent: 0em; text-align: center;"></p>
+            
+            <br>
+        </div>    
+            <p style="text-align: center; color: #000000; font-size: 18px; font-weight: bold;">我們都是五月天</p>
+            <p style="text-align: center; color: #000000; font-size: 18px; font-weight: bold;">心上一字敢 甘願做憨人</p>
+            <br>
+            <p style="text-align: center; color: #7d7d7d;">～～ 一起走吧 ～～</p>
+        
+    </div>
+
+    <script>
+        const audio = document.getElementById('myAudio');
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        function restartAudio() {
+            audio.currentTime = 0;
+            audio.play();
+            function playAudioOnFirstInteraction() {
+            audio.play().catch(error => {
+                console.log('Audio playback was prevented:', error);
+            });
+            // 移除事件监听器，以避免重复触发
+            document.removeEventListener('click', playAudioOnFirstInteraction);
+            document.removeEventListener('touchstart', playAudioOnFirstInteraction);
+        }
+
+        // 添加事件监听器，检测用户的第一次交互
+        document.addEventListener('click', playAudioOnFirstInteraction);
+        document.addEventListener('touchstart', playAudioOnFirstInteraction);
+        }
+    </script>
+</body>
+</html>
