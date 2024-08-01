@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自傳-如果我們不曾相遇</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            
+        }
+        header {
+            position: relative;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        header img {
+            width: 100%;
+            height: auto;
+            
+        }
+        header .logo {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5%; /* 设置图片宽度，可根据需要调整 */
+            z-index: 1;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1)) invert(100%);
+        }   
+        .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-bottom: 20px;
+            margin-left: 15px; /* 左边距 */
+            margin-right: 15px; /* 右边距 */
+            border: 2px solid #67cced;
+        }
+
+        .back {
+            padding-left: 0;
+            margin-left: 15px; /* 左边距 */
+            margin-right: 15px; /* 右边距 */
+            text-decoration: none;
+        }
+        .content img {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .text-content {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .text-content2 {
+            margin: 20px 0;
+            font-size: 18px;
+           
+        }
+        .text-content p {
+            margin: 10px 0;
+        }
+        .text-content2 p {
+            margin: 5px 0;
+        }
+        
+        .text-content .highlight {
+            color: #557140; /* 橙色 */
+            text-align: center;
+            line-height: 1;
+            font-size: 16px;
+        }
+        .text-content .note {
+            font-style: italic;
+            color: #555; /* 灰色 */
+        }
+        .text-content2 .note {
+            font-style: italic;
+            color: #555; /* 灰色 */
+        }
+        .text-content .note2 {
+            color: #da7d7d; /* 灰色 */
+        }
+        
+        .container p {
+            font-size: 1.5em;
+        
+        }
+        .audio-link {
+            margin: 1em 0;
+        }
+        .center {
+            text-align: center;
+        }
+        .center img {
+            width: 500px; /* 设置图片宽度为父元素宽度的50%，可以根据需要调整 */
+            display: block; /* 让图片居中显示 */
+            margin: 0 auto; /* 使用 margin 属性自动居中 */
+        
+        }
+        .audio-controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .section-label {
+            display: block;
+            text-align: center;
+            background-color: #67cced; /* 淡藍色 */
+            color: white;
+            font-size: 20px; /* 比正文字體大 */
+            padding:10px 0;
+            margin: 20px 0;
+            margin-right: -32px;
+            margin-left: -32px;
+            font-weight: bold;
+        }
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+            margin-top: -5px;
+            width: 80%; /* 或设置一个固定宽度 */
+            max-width: 800px; /* 最大宽度，防止过宽 */
+        }
+        video {
+            width: 100%; /* 播放器宽度占满容器 */
+            height: auto; /* 高度自适应 */
+        }
+        
+        a {
+            color: inherit; /* 使用父元素的字體顏色 */
+            text-decoration: none;
+        }
+        @media (min-width: 600px) {
+            .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-bottom: 40px;
+            margin-left: 55px; /* 左边距 */
+            margin-right: 55px; /* 右边距 */
+            border: 2px solid #67cced;
+            }
+            .content img {
+                width: 50%;
+            }
+            .back {
+            margin-left: 55px; /* 左边距 */
+            margin-right: 25px; /* 右边距 */
+            }
+            .section-label {
+            margin-right: -32px;
+            margin-left: -32px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../../../../main_header2.JPG" alt="背景图片">
+        <a href="../../../../index.html">
+            <img src="../../../../logo.png" alt="网站Logo" class="logo">
+        </a>
+    </header>
+    <div class="back">
+        <p><a href="../../../../index.html">首頁 &gt; <a href="../../../category1.html">考古館 &gt; <a href="../history_of_tomorrow_a.html">自傳 &gt; </a>如果我們不曾相遇</p>
+    </div>
+    <div class="content">
+        
+        <div class="audio-controls"> 
+            <p>BGM:如果我們不曾相遇demo <a href="what_if_we_had_never_met.mp3" download="what_if_we_had_never_met.mp3"></a></p>
+            <audio id="myAudio" src="what_if_we_had_never_met.mp3" controls autoplay></audio><br>
+            <button onclick="toggleAudio()">播放/暫停</button>
+            <button onclick="restartAudio()">重新播放</button>
+        </div>
+    
+        <div class="section-label">阿信的微博</div>
+        <div class="audio-link">
+            <h2>[ 好像應該聊聊 關於我喜歡的...... ]</h2>
+            <h3><a style="text-decoration: underline;" href="https://weibo.com/1265020392/4221447812955962">阿信 18-03-25 13:17</a></h3>
+        </div>
+       
+        <div class="text-content">
+            <p><br></p>
+            <p>假設，<br>
+                三條平行時間線裡的你，都來到我面前。<br><br>
+                第一個你，<br>
+                對五月天的歌曲與歷程如數家珍，<br>
+                過去20年的大小事件，你彷彿都在第一現場，<br>
+                手足胼胝，不棄不離，一路伴著我們走到這裡。<br><br>
+                第二個你，<br>
+                分不太清楚團員誰是誰，<br>
+                誰是吉他手? 誰是低音吉他手? <br>
+                你可能偶然間被突然好想你打動，<br>
+                或是在K房裡才會離開地球表面，<br>
+                你偶爾才聽聽五月天的歌，<br>
+                偶爾讓五月天陪著你。<br><br>
+                第三個你，<br>
+                被身邊損友半哄半騙，誤打誤撞<br>
+                拿著被小販兜售的螢光棒，來到五月天演唱會，<br>
+                你赫然發現，你淺意識裡竟然會唱不少五月天的歌，你驚訝於這樣的自己。<br><br>
+                -<br><br>
+                在生命裡的不同時區與我相遇的三個你，<br>
+                每個都是百分之百的你，<br>
+                獨一無二的你，<br>
+                讓我珍惜的你。<br><br>
+                你喜歡揮舞什麼顏色的螢光棒，<br>
+                你想要在哪首歌曲點亮手機，<br>
+                你想記住哪一位團員的臉孔與姓名，<br>
+                你伴我們走過20年，或者只陪我們瘋唱一夜<br>
+                我都如此真摯的感謝你。<br><br>
+                即使三條時間線裡的你對調，<br>
+                你還是那一個你，沒有責難，沒有悔憾。<br><br>
+                -<br><br>
+                在五月天的世界裡，<br>
+                我想要你自由，我想要你快樂，<br>
+                我想要你偶爾想到的時候，<br>
+                聽聽我，想想我。<br><br>
+                自由的，快樂的，那就是<br>
+                我喜歡的你。<br><br>
+                -<br>
+                謝謝泉州<br>
+                謝謝你<br>
+                -<br>
+                <p style="color: rgb(73,113,165);">#一生活一场五月天##五月天人生无限公司#</p>
+                <p>·</p>
+                <img src="what_if_we_had_never_met_1.JPG" alt="图片">
+                <br>
+    </div>
+       
+        <div class="section-label">歌曲信息</div>
+            <div class="text-content2">
+                <p>
+                    <span style="font-size: 1.5em; font-weight: bold;">如果我們不曾相遇  </span>
+                    <span>（詞曲:阿信）</span>
+                </p>
+                <br>
+                <p>如果我們不曾相遇 我會是在哪裡？<br>
+                    如果我們從不曾相識 不存在這首歌曲<br><br>
+                    每秒都活著 每秒都死去 每秒都問著自己<br>
+                    誰不曾找尋 誰不曾懷疑 茫茫人生奔向何地？<br><br>
+                    ｜那一天 那一刻 那個場景 你出現在我生命<br>
+                    ｜從此後 從人生 重新定義 從我故事裡甦醒<br><br>
+                    如果我們不曾相遇 你又會在哪裡？<br>
+                    如果我們從不曾相識 人間又如何運行？<br><br>
+                    曬傷的脫皮 意外的雪景 與你相依的四季<br>
+                    蒼狗又白雲 身旁有了你 匆匆輪迴又有何懼？<br><br>
+                    ｜那一天 那一刻 那個場景 你出現在我生命<br>
+                    ｜每一分 每一秒 每個表情 故事都充滿驚奇<br><br>
+                    「偶然與巧合 舞動了蝶翼 誰的心頭風起」<br>
+                    「前仆而後繼 萬千人追尋 荒漠唯一菩提」<br>
+                    「是擦身相遇 或擦肩而去 命運猶如險棋」<br>
+                    「無數時間線 無盡可能性 終於交織向你」<br><br>
+                    ｜那一天 那一刻 那個場景 你出現在我生命<br>
+                    ｜未知的 未來裡 未定機率 然而此刻擁有你<br><br>
+                    ｜某一天 某一刻 某次呼吸 我們終將再分離<br>
+                    ｜而我的 自傳裡 曾經有你 沒有遺憾的詩句<br><br>
+                    詩句裡<br>
+                    充滿感激<br><br>
+                    如果我們不曾相遇 我會是在哪裡？<br>
+                    如果我們從不曾相識 不存在這首歌曲<br><br>
+                 </div>
+                 <p style="text-indent: 0em; padding-bottom: 0em;"> 如果我們不曾相遇mv </p>
+                 <div class="video-container">
+                     <video controls>
+                         <source src="what_if_we_had_never_met.mp4" type="video/quicktime">
+                         您的浏览器不支持 video 标签。
+                     </video>
+                 </div>
+        <div class="section-label">微博互動</div>
+        <div class="text-content">
+            <h3 style="text-indent: 0em;">意外的雪景</h3>
+            <img src="what_if_we_had_never_met.jpg" alt="图片">
+            <h3 style="text-indent: 0em;">我會是在哪裡？</h3>
+            <img src="what_if_we_had_never_met_2.jpg" alt="图片">
+            
+            
+            <br>
+            <p style="text-align: center; color: #7d7d7d;">--未完待續--</p>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('myAudio');
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        function restartAudio() {
+            audio.currentTime = 0;
+            audio.play();
+            function playAudioOnFirstInteraction() {
+            audio.play().catch(error => {
+                console.log('Audio playback was prevented:', error);
+            });
+            // 移除事件监听器，以避免重复触发
+            document.removeEventListener('click', playAudioOnFirstInteraction);
+            document.removeEventListener('touchstart', playAudioOnFirstInteraction);
+        }
+
+        // 添加事件监听器，检测用户的第一次交互
+        document.addEventListener('click', playAudioOnFirstInteraction);
+        document.addEventListener('touchstart', playAudioOnFirstInteraction);
+        }
+    </script>
+</body>
+</html>

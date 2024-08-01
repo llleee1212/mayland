@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人生海海-一顆蘋果</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            
+        }
+        header {
+            position: relative;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        header img {
+            width: 100%;
+            height: auto;
+            
+        }
+        header .logo {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5%; /* 设置图片宽度，可根据需要调整 */
+            z-index: 1;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1)) invert(100%);
+        }   
+        .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-bottom: 20px;
+            margin-left: 15px; /* 左边距 */
+            margin-right: 15px; /* 右边距 */
+            border: 2px solid #67cced;
+        }
+
+        .back {
+            padding-left: 0;
+            margin-left: 15px; /* 左边距 */
+            margin-right: 15px; /* 右边距 */
+            text-decoration: none;
+        }
+        .content img {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .text-content {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .text-content2 {
+            margin: 20px 0;
+            font-size: 18px;
+           
+        }
+        .text-content p {
+            margin: 10px 0;
+            text-indent: 2em; /* 首行縮進 */
+        }
+        .text-content2 p {
+            margin: 5px 0;
+        }
+        
+        .text-content .highlight {
+            color: #557140; /* 橙色 */
+            text-align: center;
+            line-height: 1;
+            font-size: 16px;
+        }
+        .text-content .note {
+            color: #555; /* 灰色 */
+        }
+        .text-content2 .note {
+            color: #555; /* 灰色 */
+        }
+        .text-content .note2 {
+            color: #da7d7d; /* 灰色 */
+        }
+        
+        .container p {
+            font-size: 1.5em;
+        
+        }
+        .audio-link {
+            margin: 1em 0;
+        }
+        .center {
+            text-align: center;
+        }
+        .center img {
+            width: 500px; /* 设置图片宽度为父元素宽度的50%，可以根据需要调整 */
+            display: block; /* 让图片居中显示 */
+            margin: 0 auto; /* 使用 margin 属性自动居中 */
+        
+        }
+        .audio-controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .section-label {
+            display: block;
+            text-align: center;
+            background-color: #67cced; /* 淡藍色 */
+            color: white;
+            font-size: 20px; /* 比正文字體大 */
+            padding:10px 0;
+            margin: 20px 0;
+            margin-right: -32px;
+            margin-left: -32px;
+            font-weight: bold;
+        }
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+            margin-top: -5px;
+            width: 80%; /* 或设置一个固定宽度 */
+            max-width: 800px; /* 最大宽度，防止过宽 */
+        }
+        .video-container2 {
+            text-align: center;
+            margin: 20px 0;
+            margin-left: 10%;
+            margin-top: -5px;
+            width: 80%; /* 或设置一个固定宽度 */
+            max-width: 800px; /* 最大宽度，防止过宽 */
+        }
+        video {
+            width: 100%; /* 播放器宽度占满容器 */
+            height: auto; /* 高度自适应 */
+        }
+        
+        a {
+            color: inherit; /* 使用父元素的字體顏色 */
+            text-decoration: none;
+        }
+        @media (min-width: 600px) {
+            .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-bottom: 40px;
+            margin-left: 55px; /* 左边距 */
+            margin-right: 55px; /* 右边距 */
+            border: 2px solid #67cced;
+            }
+            .content img {
+                width: 50%;
+            }
+            .back {
+            margin-left: 55px; /* 左边距 */
+            margin-right: 25px; /* 右边距 */
+            }
+            .section-label {
+            margin-right: -32px;
+            margin-left: -32px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../../../../main_header2.JPG" alt="背景图片">
+        <a href="../../../../index.html">
+            <img src="../../../../logo.png" alt="网站Logo" class="logo">
+        </a>
+    </header>
+    <div class="back">
+        <p><a href="../../../../index.html">首頁 &gt; <a href="../../../category1.html">考古館 &gt; <a href="../people_life_ocean_wild_a.html">人生海海 &gt; </a>一顆蘋果<p>
+    </div>
+    <div class="content">
+        
+        <div class="audio-controls"> 
+            <p>BGM:一顆蘋果[ver.人生無限公司Live] <a href="an_apple.MP3" download="an_apple.mp3"></a></p>
+            <audio id="myAudio" src="an_apple.MP3" controls autoplay></audio><br>
+            <button onclick="toggleAudio()">播放/暫停</button>
+            <button onclick="restartAudio()">重新播放</button>
+        </div>
+    
+        <div class="section-label">阿信的博客</div>
+        <div class="audio-link">
+            <h2>活著，其實很好，再吃一顆蘋果。</h2>
+            <h3><a style="text-decoration: underline;" href="https://blog.sina.com.cn/s/blog_4b66ade80100gvhc.html">阿信 2009-12-06 05:03:44</a></h3>
+        </div>
+       
+        <img src="an_apple.jpeg" style="display: block; float: left;" alt="图片">
+        <div style="clear: both;"></div>
+        <div class="text-content">
+            <p class="note" style="text-indent: 0em; font-size: 12px; color:rgb(65, 65, 65); text-align: left; line-height: 0.5em;">photo by ashin 2009/12/5 ＠ 高雄，世運主場館</p>
+            <p><br>
+                又大了一歲。<br>
+                過去的一年，還是受到大家照顧了。<br><br>
+                
+                走過多少地方，<br>
+                就有多少微笑的臉，<br>
+                我點滴在心。<br><br>
+                
+                我的生日願望是，希望每個知道我名字的人，<br>
+                不管你在何方，過著什麼樣的生活，<br>
+                都能健康快樂。<br><br>
+                
+                活著，其實很好，<br>
+                再吃一顆蘋果。<br><br></p>
+
+                
+                
+            <p style="text-align: center; text-indent: 0em;"> </p>
+            <p>
+        
+            <p class="note" style="text-indent: 0em;"></p>
+            
+            
+            <p class="note2" style="text-indent: 0em;"></p>
+        </div>
+        
+        <div class="section-label">歌曲信息</div>
+            <div class="text-content2">
+                <p>
+                    <span style="font-size: 1.5em; font-weight: bold;">一顆蘋果  </span>
+                    <span>（詞曲:阿信）</span>
+                </p>
+                <br>
+                <p>經過了漫長的等候<br>
+                    夢想是夢想 我還是一個我<br>
+                    那時間忘記挽留<br>
+                    最美時候 不經意匆匆的放過<br><br>
+                    曾經想擁抱的彩虹<br>
+                    盛開的花朵 那純真的笑容<br>
+                    突然有風吹過 那一轉眼 只剩我<br><br>
+                    ｜我不懂<br>
+                    ｜人世間的那些愁 他為什麼要纏著我<br>
+                    ｜到底這會是誰的錯 還是我不放手<br>
+                    ｜人世間的那些愁 這世界給我的幽默<br>
+                    ｜這是不是要告訴我 潮起終究潮落<br><br>
+                    總要有人來陪我 嚥下苦果<br>
+                    喔 再嚐一點美夢<br>
+                    要等你先開口 那冬天才會走<br><br>
+                    有些人經過我身旁<br>
+                    住在我腦中 在我心裡鑽洞<br>
+                    有些人變成相片 堆在角落<br>
+                    灰塵像雪一般冰凍<br><br>
+                    
+                    - masa solo very cool - <br><br>
+                    時間如果可以倒流 我想我還是<br>
+                    會卯起來蹉跎 反正就這樣吧<br>
+                    我知道我 努力過<br><br>
+                    ｜我想到<br>
+                    ｜遙遠遙遠的以後 會不會有人知道我<br>
+                    ｜在這個寂寞的星球 曾這樣的活過<br>
+                    ｜遙遠遙遠的以後 天長和地久的盡頭<br>
+                    ｜應該沒有人能搶走 我永遠的感動<br><br>
+                    總要有一首我的歌 大聲唱過<br>
+                    喔 再看天地遼闊 活著不多不少 幸福剛好夠用<br>
+                    活著其實很好 再吃一顆蘋果<br><br>
+                    活著其實很好 再吃一顆蘋果<br>
+                    -<br>
+                    <br>
+                    <p style="text-indent: 0em; padding-bottom: 0em;"> 一顆蘋果mv </p>
+            <div class="video-container">
+                <video controls>
+                    <source src="an_apple.mp4" type="video/quicktime">
+                    您的浏览器不支持 video 标签。
+                </video>
+            </div>
+                <p class="note"></p>
+                <p class="note" style="font-size: 14px; text-indent: 0em; "></p>
+            </div>
+  
+        <div class="section-label">微博互動</div>
+        <div class="text-content">
+            <h3 style="text-indent: 0em;">我還是一個我</h3>
+            <img src="an_apple_4_1.jpg" alt="图片">
+            <br>
+            <img src="an_apple_4_2.jpg" alt="图片">
+            <img src="an_apple_4_3.jpg" alt="图片">
+            <h3 style="text-indent: 0em;">masa solo very cool</h3>
+            <img src="an_apple_1.jpg" alt="图片">
+            <h3 style="text-indent: 0em;">其實很好</h3>
+            <img src="an_apple_2.jpg" alt="图片">
+            <h3 style="text-indent: 0em;">突然好想見到你線上演唱會</h3>
+            <img src="an_apple_3.jpg" alt="图片">
+            <div class="video-container2">
+                <video controls>
+                    <source src="an_apple_2020.mp4" type="video/quicktime">
+                    您的浏览器不支持 video 标签。
+                </video>
+            </div>
+            <p class="note" style="font-size: 14px; text-indent: 0em; text-align: center;"></p>
+            
+            <br>
+            <p style="text-align: center; color: #7d7d7d;">--未完待續--</p>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('myAudio');
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        function restartAudio() {
+            audio.currentTime = 0;
+            audio.play();
+            function playAudioOnFirstInteraction() {
+            audio.play().catch(error => {
+                console.log('Audio playback was prevented:', error);
+            });
+            // 移除事件监听器，以避免重复触发
+            document.removeEventListener('click', playAudioOnFirstInteraction);
+            document.removeEventListener('touchstart', playAudioOnFirstInteraction);
+        }
+
+        // 添加事件监听器，检测用户的第一次交互
+        document.addEventListener('click', playAudioOnFirstInteraction);
+        document.addEventListener('touchstart', playAudioOnFirstInteraction);
+        }
+    </script>
+</body>
+</html>
