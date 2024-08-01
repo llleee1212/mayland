@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二人生-星空</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            
+        }
+        header {
+            position: relative;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        header img {
+            width: 100%;
+            height: auto;
+            
+        }
+        header .logo {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5%; /* 设置图片宽度，可根据需要调整 */
+            z-index: 1;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1)) invert(100%);
+        }   
+        .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-bottom: 20px;
+            margin-left: 15px; /* 左边距 */
+            margin-right: 15px; /* 右边距 */
+            border: 2px solid #67cced;
+        }
+
+        .back {
+            padding-left: 0;
+            margin-left: 15px; /* 左边距 */
+            margin-right: 15px; /* 右边距 */
+            text-decoration: none;
+        }
+        .content img {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .text-content {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .text-content2 {
+            margin: 20px 0;
+            font-size: 18px;
+           
+        }
+        .text-content p {
+            margin: 10px 0;
+        }
+        .text-content2 p {
+            margin: 5px 0;
+        }
+        
+        .text-content .highlight {
+            color: #557140; /* 橙色 */
+            text-align: center;
+            line-height: 1;
+            font-size: 16px;
+        }
+        .text-content .note {
+            font-style: italic;
+            color: #555; /* 灰色 */
+        }
+        .text-content2 .note {
+            font-style: italic;
+            color: #555; /* 灰色 */
+        }
+        .text-content .note2 {
+            color: #da7d7d; /* 灰色 */
+        }
+        
+        .container p {
+            font-size: 1.5em;
+        
+        }
+        .audio-link {
+            margin: 1em 0;
+        }
+        .center {
+            text-align: center;
+        }
+        .center img {
+            width: 500px; /* 设置图片宽度为父元素宽度的50%，可以根据需要调整 */
+            display: block; /* 让图片居中显示 */
+            margin: 0 auto; /* 使用 margin 属性自动居中 */
+        
+        }
+        .audio-controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .section-label {
+            display: block;
+            text-align: center;
+            background-color: #67cced; /* 淡藍色 */
+            color: white;
+            font-size: 20px; /* 比正文字體大 */
+            padding:10px 0;
+            margin: 20px 0;
+            margin-right: -32px;
+            margin-left: -32px;
+            font-weight: bold;
+        }
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+            margin-top: -5px;
+            width: 80%; /* 或设置一个固定宽度 */
+            max-width: 800px; /* 最大宽度，防止过宽 */
+        }
+        video {
+            width: 100%; /* 播放器宽度占满容器 */
+            height: auto; /* 高度自适应 */
+        }
+        
+        a {
+            color: inherit; /* 使用父元素的字體顏色 */
+            text-decoration: none;
+        }
+        @media (min-width: 600px) {
+            .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-bottom: 40px;
+            margin-left: 55px; /* 左边距 */
+            margin-right: 55px; /* 右边距 */
+            border: 2px solid #67cced;
+            }
+            .content img {
+                width: 50%;
+            }
+            .back {
+            margin-left: 55px; /* 左边距 */
+            margin-right: 25px; /* 右边距 */
+            }
+            .section-label {
+            margin-right: -32px;
+            margin-left: -32px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../../../../main_header2.JPG" alt="背景图片">
+        <a href="../../../../index.html">
+            <img src="../../../../logo.png" alt="网站Logo" class="logo">
+        </a>
+    </header>
+    <div class="back">
+        <p><a href="../../../../index.html">首頁 &gt; <a href="../../../category1.html">考古館 &gt; <a href="../2nd_round_a.html">第二人生 &gt; </a>星空</p>
+    </div>
+    <div class="content">
+        
+        <div class="audio-controls"> 
+            <p>BGM:星空[ver.諾亞方舟Live] <a href="stars.MP3" download="stars.mp3"></a></p>
+            <audio id="myAudio" src="stars.MP3" controls autoplay></audio><br>
+            <button onclick="toggleAudio()">播放/暫停</button>
+            <button onclick="restartAudio()">重新播放</button>
+        </div>
+    
+        <div class="section-label">阿信的博客</div>
+        <div class="audio-link">
+            <h2>星空，有陰影的地方，必定有光。</h2>
+            <h3><a style="text-decoration: underline;" href="https://blog.sina.com.cn/s/blog_4b66ade80102dx3i.html">阿信 2011-10-26 08:46:19</a></h3>
+        </div>
+       
+        <img src="stars_1.png" style="display: block; float: left;" alt="图片">
+        <div style="clear: both;"></div>
+        <p class="note" style="text-indent: 0em; font-size: 12px; color:rgb(0, 0, 0); text-align: left; line-height: 0em; font-style: normal;">photo by ashin</p>
+
+        <div class="text-content">
+            <p><br></p>
+            <p>有陰影的地方，必定有光。<br>
+                如同最漫長苦澀的想念，必定是因為最無限美麗的回憶。<br><br>
+                也許沒有一個人，可以陪你到世界的盡頭。<br>
+                但回憶，可以永遠擁有，<br>
+                一如星空，<br>
+                無論何時，你只需抬頭。<br><br>
+                <p style="text-align: center; text-indent: 0em;">－－－－－－－－－－－－－－－－－－－－－－－－－</p><br>
+                星空，是第八張專輯裡面一首特別的單曲，<br>
+                看過了幾米老師的同名畫冊、與林書宇導演的同名電影，<br><br>
+                本來全心埋首新唱片，不打算寫這首「電影主題曲」，<br>
+                ...看完電影的初剪之後，我改變了想法。<br><br>
+                不只是電影很好看，<br>
+                我發現，「星空」正是新唱片裡面，缺少的一片拼圖。<br><br>
+                這首歌雖然讓大家先偷偷聽到了，<br>
+                但它是意外中最後搭上這搬列車的孩子。（哈）<br><br>
+                <p style="text-align: center; text-indent: 0em;">－－－－－－－－－－－－－－－－－－－－－－－－－</p><br>
+                星星在夜空中閃亮，星空下我不停流浪，<br>
+                此生我無知的奔忙，因為你眼光，都化成了光亮。<br><br>
+                「星星」在五月天的歌裡面，不是第一次出現了。<br>
+                這次再寫星星，我延續了「知足」，寫出了現實世界的對應版本。<br><br>
+                怎麼去擁有一道彩虹？怎麼去擁抱一夏天的風？<br>
+                很多人糊里糊塗奔波了半生，回過神來，才體會了苦澀的解答。<br><br>
+                漫漫人生，簡直就像不知道何時天亮的漆黑夜空。<br><br>
+                相愛的人啊，無論現實會帶著你怎麼走，<br>
+                請把握時間創造閃爍的回憶吧。<br><br>
+                未來，某天，<br>
+                你再抬頭的時候，你將會看到......。<br><br>
+            </p>
+        
+            <p class="note" style="text-indent: 0em;"></p>
+            
+            
+            <p class="note2" style="text-indent: 0em;"></p>
+        </div>
+        <div class="section-label">怪獸的博客</div>
+        <div class="audio-link">
+            <h2>星空</h2>
+            <h3><a style="text-decoration: underline;" href="https://blog.sina.com.cn/s/blog_64cf9bdc0100wwuv.html">怪獸 2011-09-20 06:23:26</a></h3>
+        </div>
+        <div class="text-content2">
+            <br>
+            <p>玩具玩壞了，就突然要上學了<br>
+                認識了朋友，就馬上要道別離了<br><br>
+                以為自己會念書，但更會念書的人看不起你<br>
+                以為努力可以討回一口氣<br>
+                但說到底討的是自己那不爭氣的能力<br>
+                討厭的是自己那狹窄的心<br><br>
+                正覺得跟那些人打球很盡興的時候<br>
+                發現跟這些人彈吉他更有趣<br><br>
+                慢慢開始覺得音樂是一輩子的事<br>
+                但卻漸漸忽略更重要的親人的事<br><br>
+                大學同學經商被黑吃黑失敗了<br>
+                當然借他的也一起石沈大海了<br>
+                喜歡的女生無聲無息地結婚了<br>
+                但還是裝作若無其事地祝福了<br><br>
+                開始喜歡喝酒是因為喜歡跟朋友享受時光<br>
+                現在則是不想一個人渡過失眠的尷尬<br>
+                尤其是在現在的這種夜晚<br>
+                那裡已經不會有人了...<br><br>
+                中秋節，香港往北京的飛機上<br>
+                三萬英尺的高空<br>
+                白銀的雲，皎潔的月<br><br>
+                我的星空<br>
+                <br>
+          
+        
+        </div>
+        <div class="section-label">歌曲信息</div>
+            <div class="text-content2">
+                <p>
+                    <span style="font-size: 1.5em; font-weight: bold;">星空  </span>
+                    <span>（詞:阿信&nbsp;&nbsp;&nbsp;曲:石頭）</span>
+                </p>
+                <br>
+                <p>摸不到的顏色 是否叫彩虹？<br>
+                    看不到的擁抱 是否叫做微風？<br>
+                    一個人 想著一個人 是否就叫寂寞？<br><br>
+                    命運偷走如果 只留下結果<br>
+                    時間偷走初衷 只留下了苦衷<br>
+                    你來過 然後你走後 只留下星空<br><br>
+                        那一年我們望著星空 有那麼多的 燦爛的夢<br>
+                        以為快樂會永久 像不變星空 陪著我<br><br>
+                    獵戶 天狼 織女 光年外沉默<br>
+                    回憶 青春 夢想 何時偷偷隕落？<br>
+                    我愛過 然後我沈默 人海裡漂流<br><br>
+                        那一年我們望著星空 未來的未來 從沒想過<br>
+                        當故事失去美夢 美夢失去線索 而我們失去聯絡<br><br>
+                    這一片無言無語星空 為什麼靜靜 看我淚流<br>
+                    如果你在的時候 會不會伸手 擁抱我？<br><br>
+                        細數繁星閃爍 細數此生奔波<br>
+                        原來 所有 所得 所獲 不如一夜的星空<br><br>
+                        空氣中的溫柔 回憶你的笑容<br>
+                        彷彿只要伸手 就能觸摸<br><br>
+                    摸不到的顏色 是否叫彩虹<br>
+                    看不到的擁抱 是否叫做微風<br>
+                    一個人 習慣一個人...<br><br>
+                        這一刻獨自望著星空 從前的從前 從沒變過<br>
+                        寂寞可以是忍受 也可以是享受 享受僅有的擁有<br><br>
+                        那一年我們望著星空 有那麼多的 燦爛的夢<br>
+                        至少回憶會永久 像不變星空 陪著我<br><br>
+                        最後只剩下星空 像不變回憶<br>
+                        陪著我...<br>
+                <p class="note"></p>
+                <br>
+                <p style="text-indent: 0em; padding-bottom: 0em;"> 星空mv </p>
+                <div class="video-container">
+                    <video controls>
+                        <source src="stars.mp4" type="video/quicktime">
+                        您的浏览器不支持 video 标签。
+                    </video>
+                </div>
+                <p class="note" style="font-size: 14px; text-indent: 0em; "></p>
+            </div>
+  
+        <div class="section-label">微博互動</div>
+        <div class="text-content">
+            <h3 style="text-indent: 0em;">謝謝團長</h3>
+            <img src="stars_2.jpg" alt="图片">
+            <h3 style="text-indent: 0em;">星空小王子</h3>
+            <img src="stars_3.jpg" alt="图片">
+            <h3 style="text-indent: 0em;">星星為什麼會亮</h3>
+            <img src="stars_4_1.jpg" alt="图片">
+            <img src="stars_4_2.JPG" alt="图片">
+            <h3 style="text-indent: 0em;">夏夜的星空</h3>
+            <img src="stars_5.jpg" alt="图片">
+            
+            <p class="note" style="font-size: 14px; text-indent: 0em; text-align: center;"></p>
+            
+            <br>
+            <p style="text-align: center; color: #7d7d7d;">--未完待續--</p>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('myAudio');
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        function restartAudio() {
+            audio.currentTime = 0;
+            audio.play();
+            function playAudioOnFirstInteraction() {
+            audio.play().catch(error => {
+                console.log('Audio playback was prevented:', error);
+            });
+            // 移除事件监听器，以避免重复触发
+            document.removeEventListener('click', playAudioOnFirstInteraction);
+            document.removeEventListener('touchstart', playAudioOnFirstInteraction);
+        }
+
+        // 添加事件监听器，检测用户的第一次交互
+        document.addEventListener('click', playAudioOnFirstInteraction);
+        document.addEventListener('touchstart', playAudioOnFirstInteraction);
+        }
+    </script>
+</body>
+</html>
