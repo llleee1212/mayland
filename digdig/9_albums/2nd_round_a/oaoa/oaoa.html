@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二人生-OAOA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            
+        }
+        header {
+            position: relative;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        header img {
+            width: 100%;
+            height: auto;
+            
+        }
+        header .logo {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5%; /* 设置图片宽度，可根据需要调整 */
+            z-index: 1;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1)) invert(100%);
+        }   
+        .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-bottom: 20px;
+            margin-left: 15px; /* 左边距 */
+            margin-right: 15px; /* 右边距 */
+            border: 2px solid #67cced;
+        }
+
+        .back {
+            padding-left: 0;
+            margin-left: 15px; /* 左边距 */
+            margin-right: 15px; /* 右边距 */
+            text-decoration: none;
+        }
+        .content img {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .text-content {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .text-content2 {
+            margin: 20px 0;
+            font-size: 18px;
+           
+        }
+        .text-content p {
+            margin: 10px 0;
+        }
+        .text-content2 p {
+            margin: 5px 0;
+        }
+        
+        .text-content .highlight {
+            color: #557140; /* 橙色 */
+            text-align: center;
+            line-height: 1;
+            font-size: 16px;
+        }
+        .text-content .note {
+            font-style: italic;
+            color: #555; /* 灰色 */
+        }
+        .text-content2 .note {
+            font-style: italic;
+            color: #555; /* 灰色 */
+        }
+        .text-content .note2 {
+            color: #da7d7d; /* 灰色 */
+        }
+        
+        .container p {
+            font-size: 1.5em;
+        
+        }
+        .audio-link {
+            margin: 1em 0;
+        }
+        .center {
+            text-align: center;
+        }
+        .center img {
+            width: 500px; /* 设置图片宽度为父元素宽度的50%，可以根据需要调整 */
+            display: block; /* 让图片居中显示 */
+            margin: 0 auto; /* 使用 margin 属性自动居中 */
+        
+        }
+        .audio-controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .section-label {
+            display: block;
+            text-align: center;
+            background-color: #67cced; /* 淡藍色 */
+            color: white;
+            font-size: 20px; /* 比正文字體大 */
+            padding:10px 0;
+            margin: 20px 0;
+            margin-right: -32px;
+            margin-left: -32px;
+            font-weight: bold;
+        }
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+            margin-top: -5px;
+            width: 80%; /* 或设置一个固定宽度 */
+            max-width: 800px; /* 最大宽度，防止过宽 */
+        }
+        video {
+            width: 100%; /* 播放器宽度占满容器 */
+            height: auto; /* 高度自适应 */
+        }
+        
+        a {
+            color: inherit; /* 使用父元素的字體顏色 */
+            text-decoration: none;
+        }
+        @media (min-width: 600px) {
+            .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-bottom: 40px;
+            margin-left: 55px; /* 左边距 */
+            margin-right: 55px; /* 右边距 */
+            border: 2px solid #67cced;
+            }
+            .content img {
+                width: 50%;
+            }
+            .back {
+            margin-left: 55px; /* 左边距 */
+            margin-right: 25px; /* 右边距 */
+            }
+            .section-label {
+            margin-right: -32px;
+            margin-left: -32px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../../../../main_header2.JPG" alt="背景图片">
+        <a href="../../../../index.html">
+            <img src="../../../../logo.png" alt="网站Logo" class="logo">
+        </a>
+    </header>
+    <div class="back">
+        <p><a href="../../../../index.html">首頁 &gt; <a href="../../../category1.html">考古館 &gt; <a href="../2ndlife_a.html">第二人生 &gt; </a>OAOA</p>
+    </div>
+    <div class="content">
+        
+        <div class="audio-controls"> 
+            <p>BGM: OAOA(现在就是永远) [ver.诺亚方舟Live] <a href="oaoa.MP3" download="oaoa.mp3"></a></p>
+            <audio id="myAudio" src="oaoa.MP3" controls autoplay></audio><br>
+            <button onclick="toggleAudio()">播放/暫停</button>
+            <button onclick="restartAudio()">重新播放</button>
+        </div>
+    
+        <div class="section-label">阿信的博客</div>
+        <div class="audio-link">
+            <h2>OAOA，現在就是永遠</h2>
+            <h3><a style="text-decoration: underline;" href="https://blog.sina.com.cn/s/blog_4b66ade80102dtun.html">阿信 2011-08-31 10:03:12</a></h3>
+        </div>
+       
+        <img src="oaoa_1.jpeg" style="display: block; float: left;" alt="图片">
+        <div style="clear: both;"></div>
+        <p class="note" style="text-indent: 0em; font-size: 12px; color:rgb(0, 0, 0); text-align: left; line-height: 0em; font-style: normal;">photo by ashin</p>
+
+        <div class="text-content">
+            <br>
+            <p>來了，新作。<br><br>
+            原來是3D電影追夢的主題曲，所以內容比較有關「演唱會」，<br>
+            後來五個人一致決定把這首歌收錄進大碟中。<br><br>
+            為了符合新專輯的主題[______]（不要猜），於是重新寫了專輯版的歌詞，<br>
+            新的歌詞更直覺，也更挑戰我們長久依賴的某些糖衣，我自己很喜歡這個歌詞呢。<br><br>
+            後青春期之後，更容易瞻前顧後，我和我同輩的同學朋友，都不約而同的點頭了。<br><br>
+            「嗯。」<br><br>
+            好想找回一些什麼。<br><br>
+            那些已經很模糊的氣味，很久遠的回憶，很莽撞的直覺，很無畏的歲月......。<br><br>
+            無論如何，我再次告訴自己，相信當下，不要為了害怕，而留下無法更改的未來，<br>
+            每個現在，都會是值得回憶的永遠。<br><br>
+            OAOA是嬰兒的啼哭，是摩天輪的樣子，是太陽與山脈的形狀，是對著空谷的吶喊，<br>
+            是沒有語言的希望，是在風裡面寫下此刻自己的呼喊......。<br><br>
+            你的OAOA和我不同，但我們還是可以唱同一首OAOA。<br><br>
+            「現在就是永遠。」</p>
+            <br>
+        
+            <p class="note" style="text-indent: 0em;"></p>
+            
+            
+
+        
+        </div>
+        <div class="section-label">歌曲信息</div>
+            <div class="text-content2">
+                <p>
+                    <span style="font-size: 1.5em; font-weight: bold;">OAOA（現在就是永遠）</span>
+                    <span>（詞曲:阿信）</span>
+                </p>
+                <p><br>
+                我相信 苦澀的眼淚<br>
+                我不信 甜美的誓言<br>
+                我相信 音樂就該音樂<br><br>
+                我相信 愛情的純粹<br>
+                我不信 華麗的詩篇<br>
+                我相信 熱烈的爭辯<br>
+                我不信 無聲的和諧<br><br>
+                我相信 秒秒的瞬間<br>
+                我不信 年年的永遠<br>
+                我相信 搖滾就能萬歲<br><br>
+                快張開你的嘴 OA OA<br>
+                再不管你是誰 OA OA<br>
+                人生都太短暫<br>
+                別想 別怕 別後退<br>
+                現在 就是 永遠<br><br>
+                出生的那一年 OA OA<br>
+                轉眼就這一天 OA OA<br>
+                人生都太短暫<br>
+                去瘋 去愛 去浪費<br>
+                和我 再唱 OA OA OA<br><br>
+                OAOA</p>
+                <br>
+                <p>
+                    <span style="font-size: 1.5em; font-weight: bold;">OAOA（丟掉名字性別）</span>
+                    <span>（詞曲:阿信）</span>
+                </p>
+                <p><br>
+                    舔一下 飢渴的味蕾<br>
+                    跳一下 期盼的腳尖<br>
+                    恨一種 無止盡的和諧<br><br>
+                    等一個 復活的瞬間<br>
+                    喝一滴 甜美的眼淚<br>
+                    唱一首 透明搖滾樂<br>
+                    創一個 顛峰的瘋癲<br><br>
+                    這一生 太多的妥協<br>
+                    這一刻 徹底的打碎<br>
+                    這一次 丟掉名字性別<br><br>
+                    快張開你的嘴 OA OA<br>
+                    再不管你是誰 OA OA<br>
+                    人生都太短暫<br>
+                    別想 別怕 別後退<br>
+                    現在 就是 永遠<br><br>
+                    出生的那一年 OA OA<br>
+                    轉眼就這一天 OA OA<br>
+                    人生都太短暫<br>
+                    去瘋 去愛 去浪費<br>
+                    和我 再唱 OA OA OA<br><br>
+                    OAOA<br></p>
+                    
+                <br>
+                <p style="text-indent: 0em; padding-bottom: 0em;"> OAOA mv </p>
+            <div class="video-container">
+                <video controls>
+                    <source src="oaoa.mp4" type="video/quicktime">
+                    您的浏览器不支持 video 标签。
+                </video>
+            </div>
+            </div>
+  
+        <div class="section-label">微博互動</div>
+        <div class="text-content">
+            <h3 style="text-indent: 0em;">阔别三年的单曲</h3>
+            <img src="oaoa_2.jpg" alt="图片">
+            <h3 style="text-indent: 0em;">怪兽的新武器</h3>
+            <img src="oaoa_3.jpg" alt="图片">            
+            <br>
+            <p style="text-align: center; color: #7d7d7d;">--未完待續--</p>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('myAudio');
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        function restartAudio() {
+            audio.currentTime = 0;
+            audio.play();
+            function playAudioOnFirstInteraction() {
+            audio.play().catch(error => {
+                console.log('Audio playback was prevented:', error);
+            });
+            // 移除事件监听器，以避免重复触发
+            document.removeEventListener('click', playAudioOnFirstInteraction);
+            document.removeEventListener('touchstart', playAudioOnFirstInteraction);
+        }
+
+        // 添加事件监听器，检测用户的第一次交互
+        document.addEventListener('click', playAudioOnFirstInteraction);
+        document.addEventListener('touchstart', playAudioOnFirstInteraction);
+        }
+    </script>
+</body>
+</html>
