@@ -52,6 +52,7 @@
             height: auto;
             display: block;
             margin: 0 auto;
+            max-width: 400px;
         }
         .text-content {
             margin: 20px 0;
@@ -120,11 +121,10 @@
             font-weight: bold;
         }
         .video-container {
-            text-align: center;
             margin: 20px 0;
             margin-top: -5px;
             width: 80%; /* 或设置一个固定宽度 */
-            max-width: 800px; /* 最大宽度，防止过宽 */
+            max-width: 400px; /* 最大宽度，防止过宽 */
         }
         .video-container2 {
             text-align: center;
@@ -132,7 +132,7 @@
             margin-left: 10%;
             margin-top: -5px;
             width: 80%; /* 或设置一个固定宽度 */
-            max-width: 800px; /* 最大宽度，防止过宽 */
+            max-width: 400px; /* 最大宽度，防止过宽 */
         }
         video {
             width: 100%; /* 播放器宽度占满容器 */
@@ -163,6 +163,13 @@
             margin-right: -32px;
             margin-left: -32px;
             }
+            .video-container2 {
+            text-align: center;
+            margin: 20px 0;
+            margin-top: -5px;
+            width: 80%; /* 或设置一个固定宽度 */
+            max-width: 400px; /* 最大宽度，防止过宽 */
+        }
         }
         
     </style>
@@ -185,7 +192,12 @@
             <button onclick="toggleAudio()">播放/暫停</button>
             <button onclick="restartAudio()">重新播放</button>
         </div>
-    
+        <div class="section-label">歌曲介紹</div>
+        
+        <div class="text-content">
+            <p style="text-indent: -11px;">「《憨人》總會等到《出頭天》的來臨。」<br><br>
+            <p style="text-indent: -11px;">「寫出《憨人》這首歌已經是很多年的事了。」阿信回憶著。「本來自己覺得一生就只會寫出一首這麼樣的歌，但看到近來社會上這麼多的紛紛擾擾、這許多的垂頭喪氣，又開始覺得現在正是需要這樣子能夠激勵人心的歌曲，於是便提筆寫下了〈出頭天〉。」
+        </div>
         <div class="section-label">阿信的博客</div>
         <div class="audio-link">
             <h2>不怕 不哭 不孤單 給汶川的人們</h2>
@@ -250,7 +262,7 @@
         那一日 咱可以出頭天 我盼望的日子 會真快 來到我身邊<br></p>
 <br>
                 <p class="note"></p>
-                <p style="text-indent: 0em; padding-bottom: 0em;"> 出頭天mv </p>
+                <p style="text-indent: 0em; padding-bottom: 0em;"> 出頭天MV </p>
             <div class="video-container">
                 <video controls>
                     <source src="after_2008.mp4" type="video/quicktime">

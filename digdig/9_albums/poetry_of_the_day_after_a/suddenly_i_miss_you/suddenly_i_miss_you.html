@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>後青春期的詩-突然好想你</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            
+        }
+        header {
+            position: relative;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        header img {
+            width: 100%;
+            height: auto;
+            
+        }
+        header .logo {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5%; /* 设置图片宽度，可根据需要调整 */
+            z-index: 1;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1)) invert(100%);
+        }   
+        .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-bottom: 20px;
+            margin-left: 15px; /* 左边距 */
+            margin-right: 15px; /* 右边距 */
+            border: 2px solid #67cced;
+        }
+
+        .back {
+            padding-left: 0;
+            margin-left: 15px; /* 左边距 */
+            margin-right: 15px; /* 右边距 */
+            text-decoration: none;
+        }
+        .content img {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .text-content {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .text-content2 {
+            margin: 20px 0;
+            font-size: 18px;
+           
+        }
+        .text-content p {
+            margin: 10px 0;
+        }
+        .text-content2 p {
+            margin: 5px 0;
+        }
+        
+        .text-content .highlight {
+            color: #557140; /* 橙色 */
+            text-align: center;
+            line-height: 1;
+            font-size: 16px;
+        }
+        .text-content .note {
+            font-style: italic;
+            color: #555; /* 灰色 */
+        }
+        .text-content2 .note {
+            font-style: italic;
+            color: #555; /* 灰色 */
+        }
+        .text-content .note2 {
+            color: #da7d7d; /* 灰色 */
+        }
+        
+        .container p {
+            font-size: 1.5em;
+        
+        }
+        .audio-link {
+            margin: 1em 0;
+        }
+        .center {
+            text-align: center;
+        }
+        .center img {
+            width: 500px; /* 设置图片宽度为父元素宽度的50%，可以根据需要调整 */
+            display: block; /* 让图片居中显示 */
+            margin: 0 auto; /* 使用 margin 属性自动居中 */
+        
+        }
+        .audio-controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .section-label {
+            display: block;
+            text-align: center;
+            background-color: #67cced; /* 淡藍色 */
+            color: white;
+            font-size: 20px; /* 比正文字體大 */
+            padding:10px 0;
+            margin: 20px 0;
+            margin-right: -32px;
+            margin-left: -32px;
+            font-weight: bold;
+        }
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+            margin-top: -5px;
+            width: 80%; /* 或设置一个固定宽度 */
+            max-width: 800px; /* 最大宽度，防止过宽 */
+        }
+        video {
+            width: 100%; /* 播放器宽度占满容器 */
+            height: auto; /* 高度自适应 */
+        }
+        
+        a {
+            color: inherit; /* 使用父元素的字體顏色 */
+            text-decoration: none;
+        }
+        @media (min-width: 600px) {
+            .content {
+            padding: 2em;
+            margin-top: -5px;
+            margin-bottom: 40px;
+            margin-left: 55px; /* 左边距 */
+            margin-right: 55px; /* 右边距 */
+            border: 2px solid #67cced;
+            }
+            .content img {
+                width: 50%;
+            }
+            .back {
+            margin-left: 55px; /* 左边距 */
+            margin-right: 25px; /* 右边距 */
+            }
+            .section-label {
+            margin-right: -32px;
+            margin-left: -32px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../../../../main_header2.JPG" alt="背景图片">
+        <a href="../../../../index.html">
+            <img src="../../../../logo.png" alt="网站Logo" class="logo">
+        </a>
+    </header>
+    <div class="back">
+        <p><a href="../../../../index.html">首頁 &gt; <a href="../../../category1.html">考古館 &gt; <a href="../poetry_of_the_day_after_a.html">後青春期的詩 &gt; </a>突然好想你</p>
+    </div>
+    <div class="content">
+        
+        <div class="audio-controls"> 
+            <p>BGM:突然好想你[ver.FLY TO 2023] <a href="suddenly_i_miss_you.MP3" download=""></a></p>
+            <audio id="myAudio" src="suddenly_i_miss_you.MP3" controls autoplay></audio><br>
+            <button onclick="toggleAudio()">播放/暫停</button>
+            <button onclick="restartAudio()">重新播放</button>
+        </div>
+    
+        <div class="section-label">歌曲介紹</div>
+        
+        <div class="text-content">
+            <p style="text-indent: -11px;">「最遺憾的是，沒有辦法陪伴你變老；最燦爛的是，一同燃燒後再也不復現的花火。」<br><br>
+            <p style="text-indent: -11px;">「這次專輯的前三首主打歌分別是〈出頭天〉、〈你不是真正的快樂〉、〈突然好想你〉。前三首中都沒有快歌，其實是有別於以往的宣傳手法，讓我還有點擔心。」怪獸憂心道。「但因為專輯整體概念性很強，如果第一首主打歌就選〈爆肝〉，那就不是後青春期，而是在歌頌青春期，變成在緬懷過去。一個引導不好，專輯的概念便會偏掉。」
+            <br>    
+         </div>
+        <div class="section-label">阿信的博客</div>
+        <div class="audio-link">
+            <h2>突然，好想你</h2>
+            <h3><a style="text-decoration: underline;" href="https://blog.sina.com.cn/s/blog_4b66ade80100bvjj.html">阿信 2008-11-30 20:55:16</a></h3>
+        </div>
+       
+        <img src="suddenly_i_miss_you_1.jpeg" style="display: block; float: left;" alt="图片">
+        <div style="clear: both;"></div>
+        <p class="note" style="text-indent: 0em; font-size: 12px; color:rgb(0, 0, 0); text-align: left; line-height: 0em; font-style: normal;">photo by ashin 2008</p>
+
+        <div class="text-content">
+            <br>
+            <p>「有些人經過我身旁  住在我腦中  在我心底鑽洞<br>
+                有些人變成相片  堆在角落灰塵像雪一般冰凍」<br>
+                曾經，對著在我們生命中走過的人們，這樣唱著。<br><br>
+                
+                他們也許擦肩而過，也許並肩走過一段，<br>
+                也許給我們一段或者歡笑或者哭泣的風景。<br><br>
+                
+                但，最怕有些人雖然早已走遠，卻從不肯把屬於他的回憶帶走。<br>
+                於是，總在一個人時，不住地獨自懊惱：<br><br>
+                
+                「最怕此生 已經決心自己過 沒有你， 卻又突然 聽到你的消息」。
+                <br></p>
+                <br>
+                <p style="text-align: center; text-indent: 0em;">----------------------------------------------------------------	 </p>
+
+                <div class="audio-link">
+                    <h2>2010年的最後一小時， 你會突然想到誰？</h2>
+                    <h3><a style="text-decoration: underline;" href="https://blog.sina.com.cn/s/blog_4b66ade801017aoj.html">阿信 2010-12-18 21:28:51</a></h3>
+                </div>
+               
+                <img src="suddenly_i_miss_you_2.jpeg" style="display: block; float: left;" alt="图片">
+                <div style="clear: both;"></div>
+                <p class="note" style="text-indent: 0em; font-size: 14px; color:rgb(51, 63, 120); text-align: left; line-height: 0em; font-style: normal;">photo by ashin 2010</p>
+                <br>
+                2010是個有點搖晃但算不上動盪的一年，<br>
+                是那種幾年後想起來有點模糊，但依然值得想念的一年。<br><br>
+                
+                五月天突然好想你，你會突然想到谁？<br><br>
+                
+                2010年的最後一小時，<br>
+                五月天想要唱出你的想念....<br><br>
+                
+                2010年的最後一小時，<br>
+                你突然好想念的人會是谁？<br><br>
+                
+                12/24前將他/她的照片 寄给五月天binmusictaipei@gmail.com<br>
+                我們將在跨年演唱會現場大螢幕上 播出他/她的照片<br>
+                讓 全 世 界 與 你 一 起 想 念....<br><br>
+                <br>
+                <p style="color:rgb(43, 49, 100); margin-bottom: 0em;">照片樣式：<br>
+                想念最好是橫過天涯的[橫式]，想念的常寬軸比例約為[900:650]，想念的濃度大小不要低於 [300k]。<br>
+                <p style="color:rgb(51, 68, 133); margin-bottom: 0em; margin-top: 0em;">想念必須是最想念的，因為每個人只能挑選出一位（或一群），寄來 [一張] 照片。<br>
+                <p style="color:rgb(83, 106, 164); margin-bottom: 0em; margin-top: 0em;">雖然你可能有點想念五月天，但不要寄五月天的照片來，因為我們的爸爸媽媽已經寄來了。 -___- |||
+                <br>
+            
+        </div>
+        
+        <div class="section-label">歌曲信息</div>
+            <div class="text-content2">
+                <p>
+                    <span style="font-size: 1.5em; font-weight: bold;">突然好想你</span>
+                    <span>（詞曲:阿信）</span>
+                </p>
+                <br>
+                <p>最怕 空氣突然安靜 最怕朋友突然的關心<br>
+                    最怕回憶 突然翻滾絞痛著不平息<br>
+                    最怕突然 聽到你的消息<br><br>
+                    想念 如果會有聲音 不願那是悲傷的哭泣<br>
+                    事到如今 終於讓自己屬於我自己<br>
+                    只剩眼淚 還騙不過自己<br><br>
+                    
+                     突然好想你 你會在哪裡 過得快樂或委屈<br>
+                     突然好想你 突然鋒利的回憶 突然模糊的眼睛<br><br>
+                    
+                    我們 像一首最美麗的歌曲 變成兩部悲傷的電影<br>
+                    為什麼你 帶我走過最難忘 的旅行<br>
+                    然後留下 最痛的紀念品<br><br>
+                    
+                    我們 那麼甜那麼美那麼相信 那麼瘋 那麼熱烈的曾經<br>
+                    為何我們 還是要奔向各自的幸福和遺憾中老去？<br><br>
+                    
+                     突然好想你 你會在哪裡 過得快樂或委屈<br>
+                     突然好想你 突然鋒利的回憶 突然模糊的眼睛<br><br>
+                    
+                    最怕 空氣突然安靜 最怕朋友突然的關心<br>
+                    最怕回憶 突然翻滾絞痛著不平息<br>
+                    最怕突然 聽到你的消息<br><br>
+
+                    最怕此生 已經決心自己過 沒有你<br>
+                    卻又突然 聽到你的消息<br><br>
+                    <p style="text-indent: 0em; padding-bottom: 0em;"> 突然好想你MV </p>
+            <div class="video-container">
+                <video controls>
+                    <source src="suddenly_i_miss_you.mp4" type="video/quicktime">
+                    您的浏览器不支持 video 标签。
+                </video>
+            </div>
+            </div>
+  
+        <div class="section-label">微博互動</div>
+        <div class="text-content">
+            <h3 style="text-indent: 0em;">突然就...</h3>
+            <img src="suddenly_i_miss_you_1.jpg" alt="图片">
+            <h3 style="text-indent: 0em;">三個漫畫</h3>
+            <img src="suddenly_i_miss_you_2_1.jpg" alt="图片">
+            <img src="suddenly_i_miss_you_2_2.JPG" alt="图片">
+            <br>
+            <img src="suddenly_i_miss_you_3_1.jpg" alt="图片">
+            <img src="suddenly_i_miss_you_3_2.JPG" alt="图片">
+            <br>
+            <img src="suddenly_i_miss_you_4_1.jpg" alt="图片">
+            <img src="suddenly_i_miss_you_4_2.JPG" alt="图片">
+            <br>
+            
+            <p style="text-align: center; color: #7d7d7d;">--未完待續--</p>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('myAudio');
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        function restartAudio() {
+            audio.currentTime = 0;
+            audio.play();
+            function playAudioOnFirstInteraction() {
+            audio.play().catch(error => {
+                console.log('Audio playback was prevented:', error);
+            });
+            // 移除事件监听器，以避免重复触发
+            document.removeEventListener('click', playAudioOnFirstInteraction);
+            document.removeEventListener('touchstart', playAudioOnFirstInteraction);
+        }
+
+        // 添加事件监听器，检测用户的第一次交互
+        document.addEventListener('click', playAudioOnFirstInteraction);
+        document.addEventListener('touchstart', playAudioOnFirstInteraction);
+        }
+    </script>
+</body>
+</html>
